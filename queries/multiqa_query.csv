@@ -1,0 +1,430 @@
+query,answer,image,image_path,sub_queries
+What is the man holding in the poster for Blue Eyes (film)?,gun,7a4790992bbb4a853e001e7b68752e24,117d500aaa630023c4038b8268b309c0.jpg,poster| Blue Eyes (film)| man| holding
+How many colors are inthe Point Skyhawks logo?,4,c7e8e33a198f9ff64ed01fcca4386267,62f7dcf4f1b72b19fbe937e81badd6b1.jpg,Point Skyhawks| logo| colors
+What position are James Brown's hands in?,fists,8c94c8863a1dc12601f588064056198f,d179a14875639d9cfb680f784223b271.jpg,James Brown| hands| position
+How many people are in this picture of The Marcels?,nine,04bf43de3fb9ec60e2d4ae2730ec26a3,19af22e07afe0137773a47a13cae475b.jpg,The Marcels| picture| number of people
+"Is Plamen Iliev (footballer, born 1991) wearing green?",yes,c22fa469de500495cde9e49c19fafb4e,04efc3408a15848ab446ddc2d4d2bd13.jpg,Plamen Iliev| footballer| born 1991| wearing green
+What is the main color on the cover of Kicking and Screaming (1995 film)?,green,e9e7af0a85bfe062956f1b070e486bce,4f631a5505942861fed96ad8dc0fe767.jpg,cover| Kicking and Screaming (1995 film)| main color
+What color is the woman's hair on the top of the advertisement for True True Lie?,blond,ab5b1e945e030bcb84f638050605ee2c,33002a89d4b97618a27a90454ef225f6.jpg,advertisement| True True Lie| woman's hair
+Does Biohazard (band) perform live?,yes,03fcd384671ac52f7efc39f5a3be92db,ea63f0bf3dfcbd0efe3e90ff0af6e5ef.jpg,Biohazard (band)| live performance
+Are the Transplants (band) giving an indoor or outdoor concert?,outdoor,bae81d7cfc1689353f90851dc0c8828f,c7e8e33a198f9ff64ed01fcca4386267.jpg,Transplants (band)| indoor concert| outdoor concert
+What type of shoes is Takudzwa Ngwenya wearing?,cleats,d9ff3439677437f743e3d6b1122a76b8,89c1b7c3c061cc80bb98d99cbbec50dd.jpg,Takudzwa Ngwenya| shoes
+What is Don Giovanni holding in his right hand?,sword,3a54edd73657b7508a9e60575b002f2b,c9bab469e88adc0419a34a6abf7226ff.jpg,Don Giovanni| right hand
+What direction is Rodrigo De Paul wearing his hat?,backwards,7475a2210f7f3e3556ab964c35261cbe,dd5a9d1f7f4a17ca2df1d2387339efb7.jpg,Rodrigo De Paul| hat| direction
+How many streams of water are seen in the fountain in front of Lyric Theatre (Hammersmith)?,twelve,5efa8a7f6a11def76e2d39030d622110,afc2fd4277f09b50b68b2b7191d687b8.jpg,fountain| streams of water| Lyric Theatre (Hammersmith)
+What item is positioned directly in front of Michael Laudrup?,microphone,194809106165e7bd9a0dbbd15fcc4d33,7377d327e9b7294fdb91127343e04240.jpg,Michael Laudrup| item| position
+What does Helen Love have in her hands?,beverage,e332c859c0937f1937b54e814cb88e5c,c2914006ae153caf1bba7d4cb552956f.jpg,Helen Love| hands
+What facial expression does David Baldacci have?,smiling,79612e154d8e3cb774e116524c723889,bea253af5c65cce9e682cde1771431a2.jpg,David Baldacci| facial expression
+Is this photo of Norman Mann modern or historic?,historic,38060859edfbd9ea51948b9a9876a588,8c94c8863a1dc12601f588064056198f.jpg,photo| Norman Mann| modern| historic
+What is Sandy Wexler wearing on his face?,glasses,88304e1569022060cbd45543b536b390,789db54b13e458202ce00cf67ecb4b22.jpg,Sandy Wexler| wearing| face
+What color is the background in Swarnakamalam?,black,211bd3bce51045928e5491484e7f50b3,f4ec9c0ddb259c6e7bb6b8ed1c8f970d.jpg,Swarnakamalam| background color
+What is over the ears of the man on the left who is playing Hip hop music?,headphones,2a5021901574f113f445c018cc3b13a5,c22fa469de500495cde9e49c19fafb4e.jpg,man| left| playing Hip hop music| over the ears
+What is the main color in the Calgary Boomers logo?,orange,7bf7ea3f38c065ae1d8487ae6417b156,4fe987d30eff1647e86e30f858267ffc.jpg,Calgary Boomers| logo| main color
+Does Michele Didoni's shirt have sleeves?,no,15cc00cd0948a05254e1ce56342a1e81,e9e7af0a85bfe062956f1b070e486bce.jpg,Michele Didoni| shirt| sleeves
+What kind of shoes is Alessandro Pezzatini wearing?,sneakers,e8fa5ddc27d46da7b31154d494bfe3c6,890daca84ae6e9abf9529097b7185e08.jpg,Alessandro Pezzatini| shoes
+Is there a body of water in this photo of Lugano?,yes,ce74c5c019b989b197c8c15bd388c629,4a012b0163ce8530bf8760511d269d4f.jpg,photo| Lugano| body of water
+Is Karai (Teenage Mutant Ninja Turtles) in this image?,yes,74d6e1d36847a1e6e8e8b4d9a9f6d96a,ff47f2e753a2a5825174438fd981716b.jpg,Karai| Teenage Mutant Ninja Turtles| image
+Are the colors of the American flag present in the logo of Club Atlético River Plate Puerto Rico?,yes,39790cbe52e400b77427236d15b9b0f9,083b166c958a6479df5195ec55680460.jpg,American flag| colors| Club Atlético River Plate Puerto Rico| logo
+What is Chris Benoit wearing on his chest?,nothing,ccb88c88d164154335f30f6c39b363c6,ab5b1e945e030bcb84f638050605ee2c.jpg,Chris Benoit| wearing| chest
+Is River of Wine based in America or Asia?,asia,a6829966713a0ff17747fd677c81ed47,d1254b95150bd8ce68249a3b662b1de7.jpg,River of Wine| based in America| based in Asia
+What type of facial hair does Omar Jama have?,moustache,e200f1aaa31bbebb1844ee7304c649ca,90ae8ffd35e8b551adefe84665605d98.jpg,Omar Jama| facial hair
+What is the large object in the middle left of Aria (manga)?,windmill,adf9637a449938d75d8d4a0c69edd4bd,97ea83c78ac5805af20bd175cf74fdd6.jpg,large object| Aria (manga)
+What logo is on the pants of Courtney Okolo?,nike,b6bcedc1b0be14736478c74aa08cad71,6e93cfddb4d618c783245ab32c6f341a.jpg,Courtney Okolo| logo| pants
+In the midst of what action is Shaunae Miller-Uibo immortalised?,running,163c5da52cdf757029aee90ad6f96317,f0ae48e8159b5765c907f6cf5a81a95c.jpg,Shaunae Miller-Uibo| action
+What is the man on the left in this picture with Fabio Castro wearing on his head?,sunglasses,a8bde0ed60fdcf8d5f28bba3dc4153c1,6eaff02e7a4e8da95cd67e4021d98c6d.jpg,Fabio Castro| picture| man on the left| what he is wearing on his head
+How many different uniform options are available for the 2014 Montreal Alouettes season?,three,d77ab3de05854fff3d2741f546a96bc9,c62600f3a571cbb38bd66e124be5ec8a.jpg,2014 Montreal Alouettes| uniform options| season
+How many different jersey types were there during the 2014 Saskatchewan Roughriders season?,four,4ba4aa82aff79b11a3da6ef434192dfe,03fcd384671ac52f7efc39f5a3be92db.jpg,2014 Saskatchewan Roughriders season| jersey types| number
+"Aside from black and white, which other color adorns the uniforms worn duing the 2014 Calgary Stampeders season?",red,3f4c1ecbd1e562f944be1a53cf3af900,53dc50ac6c0ce30a79643be629ed8896.jpg,Calgary Stampeders| uniforms| 2014 season| color
+What does Beyoncé often hold in her hand while performing?,microphone,21d515705cceefea3f579fd281d07dbc,7cae0ca99c1c52652586d3d81b444ace.jpg,Beyoncé| performing| hand
+How many men are seen here in this advertisement for the Screen Awards?,two,0bb28c519f83f502b8962d75652f7dab,2f8161530888d451d3c689164aa78f79.JPG,advertisement| Screen Awards| number of men
+What color is the ring in the 2009 NFL season logo?,red,d19d1da052ddb481b4309b1f043390cd,dc43efe28d379eced496e264c2074d8a.jpg,2009 NFL season| logo| ring color
+What is Tom Okker wearing on the outside of his polo shirt?,sweater,a4d6a1387bd8606423136878e323380d,a86332e817d902400866ca11e12e1444.jpg,Tom Okker| wearing| polo shirt
+"What kind of body of water runs through Troy, New York?",river,af4395600fe137533092257516236124,5c751696e76db5161604e2d5c2d3f278.jpg,body of water| Troy| New York
+How many photos make up this collage of Houston?,nine,8cde2f85b5d23b4b2eb5716e0d940023,5a2697a71ac83f0776b4495cabde19dd.jpg,collage| Houston| number of photos
+What type of person is on the Gerber Products Company logo?,baby,2471de79891ff90b88d604d980416897,cdb14a035ed8950bfcfaddbb2a3f98b1.jpg,Gerber Products Company| logo| type of person
+What sport is Bobby Jones (golfer) engaged in?,golf,6423c206ed5d89bcabf4116fc792f3be,1cb81000e30369eeb33654a9f653e7e6.jpg,Bobby Jones| sport
+What color is Billy Joel hair?,grey,02083fab499fc23081c1bec576785c13,62f67108c087d149c3d245e913660bd9.jpg,Billy Joel| hair color
+What does P. B. Sreenivas have around his neck,scarf,6d712d90c4c93b4765319c9d52bcbb8c,b44e0cf530d532c59e7fdd9a59f391c1.jpg,P. B. Sreenivas| around his neck
+What type of attack is featured on this article in The San Bernardino Sun?,terrorist,2c72e0cc361ed33645740b40f177171a,338dde42313bb283e06390c93d8e7578.jpg,attack| The San Bernardino Sun
+Which hand does the man have tattoos on?,right,9e3f3aa95007f87a67976269fd37517f,b903b91a9cb9a72b45113055adba7658.jpg,man| tattoos| hand
+Waht kind of ball is on the 2.divisjon sign?,soccerball,542485f15b668987053ce9ea89fe3ae9,9d3d8ad4942b1bb99e30c438e67e0798.jpg,2.divisjon| sign| ball
+What mode of transportation is featured in the bottom photo in this collage of Copenhagen?,boat,f4b3caeb787706d2ad5e2fa8ead5c564,55d097da2debadcfdde6e3c6f7953dec.jpg,bottom photo| collage| Copenhagen| mode of transportation
+How many red rectangles are on the flag for Canada?,two,a648b2cd489eef91c53d7f48b2733c57,b95286acbb525edd9a1171deef37ee48.jpg,flag| Canada| red rectangles
+What geometric shape is used to designate players such as the Wide receiver?,circle,0b69c3b54ab2a8197f4f8be93e268a03,cc942246e565e1c93c2371d4f1c3d385.jpg,geometric shape| Wide receiver
+Is it clear or rainy in durban?,clear,9054c0e0d68ae514689303cdad3bf93b,57163d8fcd41e6bdefd412930cfdc67f.jpg,Durban| weather| clear| rainy
+Are the letter for The Merchant of Venice poster red?,no,86e1639e790ade8e6bfebad90d015174,3a54edd73657b7508a9e60575b002f2b.jpg,The Merchant of Venice| poster| letters| color
+How many photos make up this collage of Stockholm?,six,96c7af79fdd893a44fabf2799070879f,6966304e203aac28b259671c44d3ca3e.jpg,collage| Stockholm| photos
+Who are the two on the field with at least one arm raised with vertical lines on their chest in 2007 NFL season?,referees,2c08f14a07d398234b952339b0de6455,a01229fc5cac17efe55a9301a846f603.jpg,2007 NFL season| two on the field| at least one arm raised| vertical lines on their chest
+How many images make up this collage featuring Gold?,twelve,964bb6812b28019b88b814afc2b9de90,19552d5b2f6c96265e8b327a988d79ac.jpg,collage| Gold| images
+"Is the bay in Kalaupapa, Hawaii empty or full of boats?",empty,875c1c232fab181467ba75f3d1a2b8cf,182c182363f77cb56504d4c19dae56dc.jpg,bay| Kalaupapa| Hawaii| boats
+How many colors make up the flag of France?,three,ea1931a82ce6ef7a1a2ff6b7471ee3aa,4fa0463efa24c3778eacf796ebbd7cb9.jpg,flag of France| colors
+Is a globe part of the As the World Turns logo?,yes,055d118116e7747f15d9559b282eb9f7,2e7743cd44b31615fd084e917eb16aea.jpg,As the World Turns| logo| globe
+How many athletes are participating in the 400 metres run?,nine,78536b542fda80b7e28370e03be1e791,80b9da7ee2e0436ed43bf6c4be6285e5.jpg,athletes| 400 metres run
+What type of object does a person hold while doing a Pole vault?,pole,302df25d1f11f03ed1ac061cd9b526a4,080dd17b64a2c2d0e8e66931ed6539d9.JPG,Pole vault| object| person
+What is the character on the cover of the simpsons movie eating?,doughnut,9d931a861d2b9e9be0071b56fcd5dbfe,0dfce11d572b28d24274633d64db2f7b.jpg,cover| Simpsons Movie| character| eating
+How many photos make up this collage of Atlanta?,ten,e8c802f29e9869e013779c87518fb69c,aeda90835f1790f8962cd41a70d6bc35.jpg,collage| Atlanta| number of photos
+"What color are the tree leaves in this photo of Macon, Georgia?",green,6fc40d946575ae4b0408bb225c8ba495,7475a2210f7f3e3556ab964c35261cbe.jpg,"tree leaves| photo| Macon, Georgia"
+What is at the center of the circle on the Fontana North logo?,star,45dfe40c37dda4c4e4790b6a2748e70c,dce77aa258fa1e56ea88918cb8a2ad36.jpg,Fontana North| logo| center of the circle
+What is the character on the logo for the Melbourne Storm holding?,lightning,b5fafc9de980037c99a86c0855730a93,fffeb86b582502524ae6d97ef8383069.jpg,Melbourne Storm| logo| character| holding
+Does the Astrodome have a roof?,yes,21afca94b9b666ddebe28f69f10d81ef,02083fab499fc23081c1bec576785c13.jpg,Astrodome| roof
+How many arms display tattoos on Jason cummings?,one,1e7c07d0c91ff4c1fc73abd18828256a,133a00c7e95232f76690182da35fbb46.jpg,Jason Cummings| arms| tattoos
+What color is the vampire diaries background?,black,248ed349c0ddf0263b1cdd9ea96c44a8,84471b0e29e7b5622512f1a907ffc57e.jpg,The Vampire Diaries| background color
+That is held in the middle of the tower toward the top of Mazan?,bell,e0bc7c94d8b5cb2f5ab751f3c20f9216,19861097f6032aa572d31ca3549c38dc.jpg,tower| Mazan| object held in the middle
+What is around Serena Williams's kneck?,necklace,65522a2fb545c317f7bf66a8067b95eb,16c89325a88683d6ffa161ed0d72744f.jpg,Serena Williams| neck
+What is the shape of wrigley field?,diamond,6e275db434f72d93417b5356ccba8c57,2337ee0448435729a462b52d67a3a892.jpg,Wrigley Field| shape
+What part of the uniform of the 2018 San Francisco 49ers season is tan?,pants,eb63d1647514df4cae92b1094b73873e,ea5dc8587fdbc88fd245a6cc261bc128.jpg,uniform| 2018 San Francisco 49ers season| tan
+What type of lit up wheel is shown in this collage of London?,ferris,edda61d6ace989ed6a5aa01af7ffcd32,9dee6e32624d19c0b3b6d19edaacb22c.jpg,collage| London| lit up wheel
+What is Kevin Harvick wearing on the top of his head?,hat,30a7fd09d9cbe84cd52c845b9bae0893,db02e1c3b5c29be81e796c08ddbdbc2a.jpg,Kevin Harvick| wearing| top of his head
+What is the hair color of Abigail Deveraux?,brown.,e6bdad89ec85cfcd27fc48b3e609f13c,98295ff5221268ba0e48af4d2c5faf77.jpg,Abigail Deveraux| hair color
+What sport was playing during the 1981 Miami Dolphins season?,football,94ffb20a224efcde9491ec90b147ab5a,59424e6d811a38b7618696609ff17a48.jpg,1981 Miami Dolphins season| sport
+What kind of vehicle is parked outside the Astrodome?,minivan,21afca94b9b666ddebe28f69f10d81ef,eacbff5b7f3d2838fd81d3c21e13f54c.jpg,vehicle| Astrodome
+What is Trevor Bayne holding?,microphone,8c5120cbaef8f12d7d1f530f78468290,0ee3ed9239299bac713a5c2f34a0f95d.jpg,Trevor Bayne| holding
+How many columns are there in the bottom left picture of Chicago?,four,3322e5824cfbc40968ca24e289486d6c,ddd5f8da9f80a0761b127c3e240e4040.jpg,bottom left picture| Chicago| columns
+Is the stadium full or empty in this photo from the 2007 Green Bay Packers season?,full,8e748a60c143c493b899fd5ae3045c57,fef49febcbb985bff5e8ba5ea1743429.jpg,stadium| photo| 2007 Green Bay Packers season| full| empty
+What instrument can be seen in the bottom right collage of Queen (band)?,drums,3855b2d2f6f8f75611915a1d98e0f50a,9c8c086d11a84e95aaee8e967314a05b.jpg,collage| Queen (band)| instrument
+What is Sting holding on the album cover for Fields Of Gold?,umbrella,c0e58396f076f2de90c3404c6fcc9e00,08e0eb017ba996d04e9c75114428fd45.jpg,Sting| album cover| Fields Of Gold| holding
+Is Sofia a rural or urban area?,urban,c0ece862c6a5280a8960ce87f083b63e,e7bda7dc2fb190d58431e0f6e8016165.jpg,Sofia| rural area| urban area
+How many fingers does Cher have on her arm?,four,a9a36c5a88be7902c221e1ba186b2fb9,06b20247b254715e56dce63791481df1.jpg,Cher| fingers| arm
+What is the color of the foot in u.s. open (golf)?,yellow,49f1a5275554e2d92d425a892d439cb4,06860a2886e322ba88deb4d2ae7266bb.jpg,color| foot| U.S. Open| golf
+How many movie characters are present on the Guardians of the Galaxy (film) poster?,five,29c64789d397154f2d3933e2aa6c7c0b,947e0a6276f9f0e12a7b2f85d9cf8b7e.jpg,Guardians of the Galaxy (film)| poster| movie characters
+What color is the building with a clock on top in Sapporo?,white,b1d7f2c40e1665bac8eb46d209d8f215,14dfd0876fb222e2c83d1562ca938c99.jpg,building| clock| Sapporo
+What is Giorgio Armani wearing around his neck?,tie,89c1b7c3c061cc80bb98d99cbbec50dd,8b96f2d8333db215aad479d57737d8ba.jpg,Giorgio Armani| wearing| neck
+How many curved leaf-like shapes can be seen on the emblem above the logo for The Musketeers?,three,2b5ed23fb55bdcb5686e3111c0cd82b7,717b9622d97becb987e3ff8f19e5fcd7.jpg,emblem| logo| The Musketeers| curved leaf-like shapes
+Is the banner under the soccer ball in the Southampton F.C. logo striped or dotted?,striped,9ac8a39185a2a7aa8d90c9fcff528a3e,6c7f566f0662ec1b97f2d5b95c7a4976.jpg,Southampton F.C.| logo| banner| soccer ball| striped| dotted
+What instrument is Jason Aldean holding?,guitar,f55a03abab060637d3ee0d913dae98b0,eb67dcd4ac10ab54827d6a9a20b1d182.jpg,Jason Aldean| instrument
+What is the logo on the shirt of Cristiano Ronaldo on the upper left called?,swoosh,15a4b2250c67c910eeaf776f08b08bc8,6e3df75df6440d8e4633838bc459ecc3.jpg,shirt| Cristiano Ronaldo| logo| upper left
+Is it cloudy in this picture of wrigley field?,no,6e275db434f72d93417b5356ccba8c57,b95286acbb525edd9a1171deef37ee48.jpg,Wrigley Field| picture| cloudy
+What kind of pet does the family in Family Guy have?,dog,ccab3cabeaf253f735b480e97eb081c1,5efa8a7f6a11def76e2d39030d622110.jpg,Family Guy| pet
+What is Barry Geraghty sitting on?,horse,7b36cf429373f0e91c6a009495349e8a,a48805beb5b3eb40f563d5c04bb6f0d7.jpg,Barry Geraghty| sitting on
+What is the color of the pants of the 2008 New York Jets season uniform?,white,66f4925b6054e69ab93b428750f7a78e,e76344027502bbcef77d7cb10df55d24.jpg,2008 New York Jets| season uniform| color of pants
+"Is Albany, California next to a body of water?",yes,1b8871db69a35d299597e485ec2e354f,266ac6c1b2915a60ad33effa2f4e074d.jpg,"Albany, California| body of water"
+What orange shape is featured on the title screen for Doctors (2000 TV series)?,circle,b01b873a6dc08e03e5a49eb290987c88,08721a6909b3c42b35bedce52df26db9.jpg,title screen| Doctors (2000 TV series)| orange shape
+Is the woman on a cover of X-Blades in a bra?,yes,3c3352332806e2a4362148e02ea7642b,6716c3b54a4ba7204e3a62f89d3a5f49.jpg,cover| X-Blades| woman| bra
+What is the man on the right side of the Barnsley F.C. logo holding?,ax,3be96d3d62ebf9e6b0a3f46e90696eed,06d46dd8e2455c9445aebf154924eb8b.jpg,Barnsley F.C. logo| man| right side| holding
+What type of trees are shown in this photo of Los Angeles?,palm,e5585615464800f8d4f0ce2d6daf203b,11c2e048c759f21481836bcc408407c8.jpg,photo| Los Angeles| trees
+How many people are shown in the opening shot of One Tree Hill (TV series)?,one,3e50f7ecd1d356bb402e2efc08178ef7,52cd57577ed72af468564704d795d7ce.jpg,opening shot| One Tree Hill (TV series)| number of people
+How many stripes are on the helmets of the 2018 Arizona Cardinals season?,none,6bc707beaac79c809eaea13328472f45,e980eca9951d60fe14bcd2b5425bb7aa.jpg,2018 Arizona Cardinals season| helmet stripes| number
+How many colors make up the Ford Motor Company logo?,two,c4e4761af42febd83203aee57438a888,a6b5a91199e92dfa816afa78b412ad5f.jpg,Ford Motor Company| logo| colors
+What singular part of a bird's body adorned the helmets worn during the 2017 Philadelphia Eagles season?,wing,98118c5e614ff28912714e9ffa587ba5,cae606fdd5b8469cb13aa5ba5dfe76a6.jpg,helmets| 2017 Philadelphia Eagles season| part of a bird's body
+How many uniform options for the 2017 Oakland Raiders season include gray pants?,two,68c698a2756a4faa4567deaab6b602eb,8e8a25c6143750f3269b451d39213681.jpg,2017 Oakland Raiders season| uniform options| gray pants
+What color is the background on the cover of And Then There Were None (miniseries)?,black,b05b13da6218a48f9f7b5d588246b3ea,b2c74982ff878b67eafb030fe355d992.jpg,cover| And Then There Were None (miniseries)| background color
+What is Mary J. Blige wearing around her neck?,scarf,ad6b4b615fc63a3685ca5be289e2af6d,9975f93834166e70263e5f8df581c7d2.jpg,Mary J. Blige| necklace
+What type of earring is the woman wearing on the Growing Pains (Mary J. Blige album)?,hoop,51c065becbb7d1e8f5438c78b421107e,0f76453a5f76e22a9fcb5909cead051d.jpg,earing| woman| Growing Pains (Mary J. Blige album)
+What color is the 2006–07 Serie A map of Italy?,grey,d35c375a2e54e986eab2341276e627b5,3df7936a4cb65118a456b738f476ae70.jpg,2006–07 Serie A| map of Italy| color
+How many five point stars are on the flag for Australia?,one,d37579e1b3af9802d410eb94a26b1ec4,79612e154d8e3cb774e116524c723889.jpg,flag| Australia| five point stars
+How many men are visible in this photo of St. Clair Streett?,8,8e2561c5bf570af23a3951b42be1b17b,ab5ab0cf63e1690083a9baa148338778.jpg,St. Clair Streett| photo| number of men
+What color is the bright coat that the guy with the sign on his back is wearing in the background of 2007-08 in english football?,orange,03d4be8a0709b089a2b72708f5a64875,5fb9bcf7c8f30622624445b00faf7cd5.jpg,bright coat| guy with the sign| background| 2007-08| english football
+Is it nighttime on the cover of How to Train Your Dragon (film)?,yes,a70a6f09da4916555e87196636a2d6b7,085b35868038e28b14e16d92358257b1.jpg,cover| How to Train Your Dragon (film)| nighttime
+What is the woman wearing on her face in the poster for fifty shades darker (film)?,mask,9b028906a33565feb187acaf72e26076,6019aff2137398f1731cbc1321994ef9.jpg,poster| fifty shades darker (film)| woman| face
+What type of sports activity are these people in the Marathon doing?,racing,4785bf29e555e41b0b1fec7307a215ba,433e905f26cb789cf322745b178bade5.jpg,Marathon| sports activity| people
+How many people are on the cover of Couples Retreat?,7,6a3b3dbe0908068988b650079d47fd47,1879c9f1a36102a9174c458b418c8d95.jpg,cover| Couples Retreat| number of people
+What company made the headband Tereza Smitková is wearing?,nike,e09fd797f574299b752e8194ba9ede23,7d7e4f56a0a4c949be6efc927ca2759c.jpg,Tereza Smitková| headband| company
+How many human eyes are seen on you raise me up?,one,def39a33af26c6fe95ded564d9ee6ca4,dc66961601133f0b26f44d0f69bada1c.jpg,you raise me up| human eyes
+What type of art is the sheet trying to communicate?,music,05fbc815abd34af27accadcf9fd92623,fa8a146bc6f824a7cf62e1b62ac579fc.jpg,type of art| sheet| communicate
+How many buttons are on Johann Sebastian Bach's shirt?,five,e7131007c33fe496624f9e8b3a057272,2ee8378d5b847e140443a2e7097700af.jpg,Johann Sebastian Bach| shirt| buttons
+What main color besides yellow is featured on the CD Shine on You Crazy Diamond?,green,7b1f2357a0eaf37c9d8767d76629093e,e135e6d190044eb80c80a012ed718204.jpg,CD| Shine on You Crazy Diamond| main color| yellow
+How man refs can be seen in this game from the 2007 NFL season?,two,2c08f14a07d398234b952339b0de6455,7a536e03eb3a437d53e9504f8b8121dd.jpg,refs| 2007 NFL season| game
+What type of jewelry is shown here commemorating the 1994 San Francisco 49ers season?,ring,be753f80b7fcf4f47bd7e1685775a06b,0b94245596940d1ab44df4bf05ce6e42.jpg,jewelry| 1994 San Francisco 49ers season
+How many different pictures of Cardiff are there here?,seven,7245d920b914309a4c162cba5def05bf,86119609fb37222c24b483e560335b3d.jpg,Cardiff| pictures
+What color are Alan Hulme's eyeglasses?,black,7cfabbebbe8db20490f7baf1cd27f67b,88304e1569022060cbd45543b536b390.jpg,Alan Hulme| eyeglasses| color
+Is there a woman in a green dress on the poster for Pachaikili Muthucharam?,no,1e577f9ca5c3165b1ac5df3c86799acc,e9e2a58f0870fc2ccf01c5a4b8dbcbe3.jpg,woman| green dress| poster| Pachaikili Muthucharam
+What shape on the United States flag encases all the stars?,rectangle,4c6e0c8d6b9223bd435809e52eecd008,0d85efa34accf8179042f2ae47d6c3c3.jpg,United States flag| shape| stars
+In what position does Audrey Hepburn have her arms?,crossed,e704f7f0109e272e67d6aa8c9374f3ad,66b7095263de15245dc88584b1798f90.jpg,Audrey Hepburn| arm position
+Which uniform of the 2005 New York Jets season has striped socks?,white,a610125f041c5732c2200928840b6cec,89e2dd256817442c5571c091cf3bdbac.jpg,2005 New York Jets season| uniform| striped socks
+How many uniform options from the 2008 New England Patriots season include gray pants?,one,df3b2c504b377793b7275e9ec6cd1e2f,de3de9984625c39dcd31823326d184e7.jpg,2008 New England Patriots season| uniform options| gray pants
+What is the main attribute of all of the helmets of the 2008 Cincinnati Bengals season?,stripes,4c8915b9c1df690b2a661f33108e7c40,1bed1b05f9bac3403bbc21279f207e38.jpg,2008 Cincinnati Bengals season| helmets| main attribute
+What color shirt is Alex O'Brien wearing?,black,8a92cfca467dd162888e507549ebe442,eccebef37f68d94084d584ea2e963754.jpg,Alex O'Brien| shirt color
+What is in front of the big globe in new york city?,fountain,bbc66fb789c0c669715df33c27868c96,b603827d1bb2366d28cf8fc0604bb6c2.jpg,big globe| New York City| location
+How many shirt collars are displayed in the inbetweeners (television advertisement)?,one,95239a3ddf3c4bb9193e167e17a21e68,aa58efa8bb68d1620a6598bc6644bb07.JPG,shirt collars| inbetweeners| television advertisement
+How many walkways are in front of the Tokushima Airport?,two,ba3d74f7a94a177ad4481ab450d46a50,1b56673db55e0e521a313ada3957b7c0.jpg,walkways| Tokushima Airport
+What color are the players' pants for the 2017 Atlanta Falcons season?,white,5e994d685e7bde8bea6edbce9c5c45cc,bb992017e64e5524be340b8e45948c69.jpg,players' pants| 2017 Atlanta Falcons season
+What is attached to Mark Webber's ear?,headset,ecc797ecdc1cc6f36852dc924b3b4b91,26b572bdc5c36490baab3b178dae5d7d.jpg,Mark Webber| ear| attached object
+How many singers are in g.o.d?,five,5fd7f5e4966fc7b9f45887aa2bc8772a,3f80e0e4fa638730ed5e6f1f02f8dcaf.jpg,g.o.d| singers| number
+What is on Takuma Sato's head?,hat,c4d2ee3c79ee8f1654109797ce6022fa,4ac9a1e0c37c639aa7ce76ad7dc49872.jpg,Takuma Sato| head
+What animal is the pin being worn by Lark Voorhies?,turtle,4ebb6d6a8b4d8cc03271a0b9f09eda3b,f5cbf925ab8a92bed75b9ad81fffe656.jpg,Lark Voorhies| pin| animal
+What is the structure spanning across the water in this photo of Sydney?,bridge,2d6cdcc1ce5a038f2f8e6fe3e2a804f6,2a5021901574f113f445c018cc3b13a5.jpg,structure| water| photo| Sydney
+What type of events are played at the green field in the middle left picture in Melbourne?,sports,b1e3471501fed319044afd363afc295a,ff76c187e094be46f175e5c731509d9a.jpg,green field| events| Melbourne
+What kind of tree can be seen on a top right picture of Las Palmas?,palm,b4f9c96be63a3abb9def1999b3fb1ddd,862fffb2418902b42e48f82bfc0bc455.jpg,Las Palmas| tree| top right picture
+What structure is at the top of the Stockport County F.C.'s logo?,castle,396e87f6209e96943fed3fc8d0ed21ff,7bf7ea3f38c065ae1d8487ae6417b156.jpg,Stockport County F.C. | logo | structure
+How many arrows are on The Get Down logo?,two,ee350cabe098b6fdc9adf37d81d625f1,2e74be131b014c9b79ae8f3bceaf9ed4.jpg,The Get Down| logo| arrows
+What is Crash Bandicoot riding on the Crash Bandicoot: Warped cover?,motorcycle,1a7524701412ef03681f6ded23cfc848,cc7869f423d165ed6e34c602b58937d1.JPG,Crash Bandicoot| riding| Crash Bandicoot: Warped cover
+Are there any mountains present in the photo of Sappada?,yes,31bc7791c4b62a8a9b5c92b8708a3db6,f6b033b9422406514eaf9cdea7c6e4d2.jpg,mountains| photo| Sappada
+Is Melbourne next to a body of water?,yes,b1e3471501fed319044afd363afc295a,e4ee76ee7611fc80e3547cb3b86e2ab2.jpg,Melbourne| body of water
+What object is in the middle of the table in the Drunk History title screen?,book,ceca962a3d5796d0824ee2926473697b,03c03d15d7f8d3f74a86eae6053c27a1.jpg,table| Drunk History title screen| object
+In what position does 1903–04 Brentford F.C. season have his arms?,crossed,587fca3573d068bdb9d2c7c7ef25c434,ce74c5c019b989b197c8c15bd388c629.jpg,1903–04 Brentford F.C. season| position| arms
+What is on David Ferrer's wrists?,wristbands,f6b033b9422406514eaf9cdea7c6e4d2,1371b12c3f28f9e389a0e96abcfdd190.jpg,David Ferrer| wrists
+What type of facial hair does the man in Bohemian Rhapsody (film) have?,mustache,f4dd234b03a63a8f028ff86bcafc1048,3ce7d5b66259938f38ac763da3277302.jpg,facial hair| man| Bohemian Rhapsody (film)
+Are there people out in front of the Gielgud Theatre?,yes,2975029acc55e10179adfb759a983af7,24ac931e1364cc891231c815b1e046ef.jpg,Gielgud Theatre| people
+What shape is the City Stadium (Green Bay) sign above the gate?,oval,ada689e6a4955d1490897a22955b905d,e82056d716b0bbbe12c62dd0c27501af.jpg,City Stadium (Green Bay)| sign| shape| gate
+What shape is the logo on the Memorial Stadium (Baltimore)?,oval,b28ccfc26c070e2c3dabb8728ebf5af8,39790cbe52e400b77427236d15b9b0f9.jpg,logo| Memorial Stadium (Baltimore) | shape
+What fruit is in the background of the DVD cover for Lemonade Mouth (film)?,lemon,f4592cddc5e1363b3a5b6249911430e9,3b7dd8b73948f3dceff74f6f2b4a6de0.jpg,DVD cover| Lemonade Mouth (film)| fruit
+What is the central color of The Big Bang Theory poster?,yellow,dde00f74ba94148d86e409bf3b5d998c,b22d98409a61713661c1071b05dcbab8.jpg,The Big Bang Theory| poster| central color
+What kind of building is this 1999 NFL season game played in?,stadium,4e13d6f96d479400abde4c6eba6839d3,ccb88c88d164154335f30f6c39b363c6.jpg,1999 NFL season| building
+What color pants are the players with white jerseys wearing during the 2004 NFL season?,gold,3cf59c460286fb52bdcb8df9af52a8c3,94c7fea8111c1e7be8a67201f3503c3b.PNG,players| white jerseys| 2004 NFL season| pants color
+What type of hat is Ryan Hunter-Reay wearing?,cap,5457edea15d53a9780b2280e3d878d8f,e518bd3498229701912731c3ca4d7e5f.jpg,Ryan Hunter-Reay| hat type
+How many gentlemen are seen in this photo from Humor Risk?,four,49c32d22fad13ce3265505e15d46a707,b41703e0820229bfb7da27e20b11c66e.jpg,photo| Humor Risk| gentlemen
+what is the figure doing in the Knattspyrnudeild Hamars patch,running,1b038545f5e682d7d77126c488a49f6f,a95694ae26db8530141b6a39d1b9c157.jpg,Knattspyrnudeild Hamars| patch| figure| action
+Who is the Red Queen (Through the Looking-Glass) talking to?,alice,77cab9bc4fcf1427a065ec82952d9d50,11784043f7740096fb6ae69de282bdec.jpg,Red Queen| Through the Looking-Glass| conversation
+What color are the pants associated with the 2016 San Francisco 49ers season?,tan,2e090a6f1f4aa86fa8578021232adc28,a5fc7aa9b3c87de21381d5237523797c.jpg,pants| 2016| San Francisco 49ers season
+Does Sonu Nigam have straight or curly hair?,curly,472f04dff31b6612980ac065320b04ae,80c6d9c1393c4b10eacaf9b1cc344d07.PNG,Sonu Nigam| hair type| straight| curly
+Does Jaspinder Narula have on earnings?,yes,8ac4b0362d9878179d9fc0501cdf104e,897da25f5a40774226043fa45caf078e.jpg,Jaspinder Narula| earnings
+What is this member of the 2014 NASCAR Sprint Cup Series holding in his hands?,microphone,8d6891ecfd9adddd7b56885701b80e35,f8b3832323489f8e408c55e89cdf6521.jpg,2014 NASCAR Sprint Cup Series| member| holding in hands
+What color are Kristin Clarke's pants?,black,3f73ed2db0beb138b42acc39bd6115d2,0032a8b8b3915ac99fbc04aa70dd1a54.jpg,Kristin Clarke| pants| color
+Is Janique LeBlanc competing in the traditional figure-skater's skirt and tights?,no,06488ec96cc1c0e00eb4337d41d5748e,b8293897e5803087d754e05167e965b0.jpg,Janique LeBlanc| traditional figure-skater's skirt| tights
+How many photos make up this collage of Athens?,six,5dc4e9341f6f12b0c7918c2e72e6485c,699da80420cffc992ad71c06ffdbafd8.JPG,collage| Athens| photos
+What hand is the player holding the ball in in this game of Rugby league?,right,0cc48b760bc4881fff2eec74beab28e3,1a32c52f276b899339fab1ba9e1481e2.jpg,player| ball| Rugby league| hand
+What is the Baseball player doing with his bat here?,swinging,943207e5c2e4cd4058380ca80c618ffe,f6909224eb6c005422b55367e78a299c.jpg,Baseball player| bat
+What is Alex Zanardi wearing on his head?,hat,25bdef3d0833437d4cdbf449ce88384c,4fbb7040e9dc9f3b5677f20a71ca72bb.jpg,Alex Zanardi| wearing| head
+How many boats can be seen in the foreground of the water next to Boston?,one,74ee114f86c8e57d286979c397367047,2dfcb50ae5cafb737e953a50d67e346b.jpg,boats| foreground| water| Boston
+What color is used to designate Mandarin Chinese-speaking areas?,green,bd3aced2dea1417d0c108823700706b4,230a4474ff09dbf8c5b40daeb6474ccd.jpg,Mandarin Chinese-speaking areas| color designation
+"How many athletes are running the 10,000 metres?",5,9e23bb41ef807a7d0d32fa0e87e3086c,14af7ecc7680f8d41b7465c442cbab09.jpg,"athletes| 10,000 metres"
+How many peoplare in the Yeh Rishta Kya Kehlata Hai poster,three,bbf15f028a057551beda7b4a6b49e0a9,453ad18ad846e855c8a09de710ee13f9.jpg,Yeh Rishta Kya Kehlata Hai| poster| number of people
+Was the image from the 2012 Major League Soccer season taken in the day or night?,night,9a520b4b6e493f019601983644c4369c,2fdf42c5645c1dbe61ee27d23e95ed76.jpg,2012 Major League Soccer season| image| day| night
+What color are the giant glasses on the poster of Taarak Mehta Ka Ooltah Chashmah?,red,0eddcd387498514536009f45e09f3f43,b80563f8de9860ca5d5b99d287280077.jpg,giant glasses| poster| Taarak Mehta Ka Ooltah Chashmah
+What is Vasily Lanovoy wearing around his neck?,medal,658a47855503acc35f5cabeea412eb4b,2a9670077e3ad8d5dd25a782f877d5a9.jpg,Vasily Lanovoy| wearing| around his neck
+What is the person in the November (2004 film) poster wearing on her face?,glasses,afcbabf2a1647d1d4d7cab1175180818,60145e01d2cd11bb41788025952e8da0.jpg,poster| November (2004 film)| face
+How many total people are in Think Like a Man,nine,f6811715382ffd1bd0bfa6cb379dca12,0400e8dd0fb939a72f34f1b75c8265f8.jpg,total people| Think Like a Man
+What is a man associated with America's Got Talent (season 3) wearing on his left wrist?,watch,cc2dbcf64693f2764d9703431bc611ae,7a0565156ada0c0320fba7a4b83439c9.jpg,man| America's Got Talent (season 3)| left wrist
+Is Shinji Higuchi holding a potato?,no,be71f06ce3121e422ff482a267443cad,adf9637a449938d75d8d4a0c69edd4bd.jpg,Shinji Higuchi| holding| potato
+What color tie is Hiroki Hasegawa wearing?,black,828459b833ed82eea112b5aaa7d32ee6,3b90ef1da4c93d9c02d3f16e191659a2.jpg,Hiroki Hasegawa| color tie
+What shape is the earring on the ear of Satomi Ishihara?,circle,4f368c0c4d2b145f95ca70d5cb71c08f,125f89b37bec989af6a4ff6a60faeb1c.jpg,earring| Satomi Ishihara| shape
+how many people are on this post of The Guest (TV series),3,e135fe53c4250210ddf3b2ef22689e8f,343a896afa24a72e36ec6aa909b7a059.jpg,post| The Guest (TV series)| number of people
+What is Matthew Rolston holding in his hand?,camera,3b2a930ca884514a0d10432d2cdeff75,163c5da52cdf757029aee90ad6f96317.jpg,Matthew Rolston| holding 
+What shape is at the top of the Esporte Clube Santo Andre logo?,star,cd688309f231129c3e897a33704d62e6,116b1e5556c2f3c1f9732f7d0c20e9f1.jpg,Esporte Clube Santo Andre| logo| shape
+What type of weather feature is the Melbourne Storm logo holding in its right hand,lightning,b5fafc9de980037c99a86c0855730a93,d5b43ca18a2c78f27ade50d5eb8c6b01.jpg,Melbourne Storm| logo| weather feature| right hand
+What kind of racket is Sean Williams Scott holding in this poster for Balls Out:  Gary the Tennis Coach?,tennis,ad7718bfa2e49fb964c9c720233eed29,81f60493e2fd56d3616585aecbb28013.jpg,poster| Sean Williams Scott| Balls Out: Gary the Tennis Coach| racket
+What animal is in The Night of the Grizzly?,bear,f8c6becec72a684835503a24149b9eaa,f0c8de09b794cbd93b77203bd495fa81.jpg,The Night of the Grizzly| animal
+What is the dominant color in the Jordan Grand Prix logo?,yellow,d969ceafa603334eaac0474944681348,0f69fc263a48807f919b50b853d2c1f9.jpg,Jordan Grand Prix| logo| dominant color
+Does a river run through Buenos Aires?,yes,287d270f16601a9fe4410f40858e631f,c3098661477a7e46f87d3f229f608fbd.jpg,river| Buenos Aires
+What is Jeff Gordon wearing on his finger,ring,e14fef998ba0732ee0055fb68d2ecef7,6ecce40ab52b6ce1285ac7b1da24aba2.jpg,Jeff Gordon| wearing| finger
+What type of expression is on the face of Sergio Garcia?,happy,5193b84077acfb0170e5dcba724994ec,6999badd2ac247b75e4711f634e65328.jpg,Sergio Garcia| facial expression
+"What kind of tower is in the bottom right of this collage of Richmond,Virginia?",clock,6678605c214548a9683bfcb502376e7b,3e7945352b1a63f1c317ea55f7ebb335.jpg,"collage| Richmond, Virginia| tower"
+What color are the shoes worn by 	Ryan James (rugby league)?,white,fe24cb4aa9578d573c92a61bb221d47f,d77ab3de05854fff3d2741f546a96bc9.jpg,shoes| Ryan James (rugby league)
+What is the vehicle people are riding on the poster of Tour de Pharmacy?,bicycle,99124946fa2527b15785d5a0c7f6b01c,b96eb98b831d2398c040d75f938fb89d.jpg,poster| Tour de Pharmacy| vehicle
+What color is the van parked directly in front of Royal Court Theatre?,yellow,c1403c696634ae69e2250d6dd7e0ff99,041bd2f8c04c361ac59882ac89dc45ff.jpg,van| Royal Court Theatre
+Does Michael van Gerwen look happy or mad in this photo?,mad,47baa12786114b191d0ac3184752182e,7057b6d34966071d3329ce670f1353a7.jpg,Michael van Gerwen| photo| happy| mad
+What is around the head of the woman in the corner of the Starlink: Battle for Atlas cover?,headband,2653074a069c49a84a26c1be7a839f6d,5ce130c5933a639a4c3ebe8d7b5dbc43.jpg,Starlink: Battle for Atlas| cover| woman| head| surrounding object
+What kind of coaster is shown in this photo collage of Copenhagen?,roller,f4b3caeb787706d2ad5e2fa8ead5c564,89b66aa37193ab1bf3ef753ffaad88a8.jpg,photo collage| Copenhagen| coaster
+What color are the license plates seen by the Almeida Theatre?,yellow,e980eca9951d60fe14bcd2b5425bb7aa,21d515705cceefea3f579fd281d07dbc.jpg,Almeida Theatre| license plates| color
+What color hair does Shakti Prasad have?,black,72c9380b15d5e9b5ce374f6e246264aa,0bb28c519f83f502b8962d75652f7dab.jpg,Shakti Prasad| hair color
+What is Kurt Fearnley doing with his mouth?,smiling,9f821cef828d3ea40328fdf2f2aef5ed,ab5ab0cf63e1690083a9baa148338778.jpg,Kurt Fearnley| mouth
+What color is the background of the The Twilight Zone (2002 TV series) title screen?,black,559e62f2605fadbc85f53b952f88c12f,55bba20dd5edce505910342b8affef05.jpg,background| The Twilight Zone (2002 TV series)| title screen
+How many characters are on the cover of Presidio Med?,seven,c44f580bca52c61a5eed56a8deb6e1e2,ce1be8ddb89742a246d26a0da2731e1e.jpg,cover| Presidio Med| characters
+What is Dean Stoneman doing with the vehicle?,racing,bc17d5450d8cd6bef591921ff4162fc3,9fadbf39d686a41f43d11dae1235938d.jpg,Dean Stoneman| vehicle
+What type of writing is on the piece of paper that Johann Sebastian Bach is holding?,music,e7131007c33fe496624f9e8b3a057272,98404c6d34b84d9047e9826c6a29cf78.jpg,piece of paper| Johann Sebastian Bach| writing type
+What style of hat is Bernhard Langer wearing?,visor,d13205b86b5f23d818807147f889accc,3f1e9411579f5450b14ded1e7325ac54.jpg,Bernhard Langer| hat style
+How many photos are in this collage of San Paulo?,six,10c5248632a66115431c41aebbd6d738,63a1d407e9f259f166652674bc5d5766.jpg,collage| San Paulo| number of photos
+What object is seen in the upper right picture of Rio de Janeiro?,statue,4dcad69cdbc6d6787bda154aaa4830ff,79975575f0522e089d2b79f8b55bd883.jpg,upper right picture| Rio de Janeiro| object
+How many photos are in this collage of Curitiba?,six,4968e1891da05945484c30faadf6ae34,f38da8683114d82a2fc5aaa66447a4e9.jpg,collage| Curitiba| photos
+Are there many historic buildings displayed in this collage of Southampton?,yes,ae63680ef315f50a131ccdf76fcb8330,304283ec66ecfbd88cbae4e07d4922de.jpg,collage| historic buildings| Southampton
+Did 2006 NFL season games take place in spite of snow storms?,yes,3f69cd396566b100b8245c5e3ddf021d,b9343eb890f898f8a8b4d6d8709dcc89.jpg,2006 NFL season| games| snow storms
+What human feature does the red car on the cover of Cars (video game) have on its hood?,face,95f8843e3a9aecaf612cbd409cfc93a3,0fd825da597e6205cc76de85905ec02a.jpg,red car| cover| Cars (video game)| human feature| hood
+What style of hat is Richard Petty wearing?,cowboy,9f02b3c432f0114f2bc26cd2ef819be9,d472cf64bd333552e450f8006115216f.jpg,Richard Petty| hat style
+What is the type of cap called that Conor Daly is wearing?,baseball,8e02cc2d2273cd2e08de81903ae6eb04,11e89fa9fccb374f26f1243e3c7151b0.jpg,Conor Daly| cap| type
+Does the continent in the middle of the map of English language countries contain more light or dark-blue colored nations?,light,aaa3978252c031f9e8106294db920869,ac76d9a704dbd92cf03b32efbb7da48a.jpg,continent| map| English language countries| light-blue nations| dark-blue nations
+Is this photo of Paul Maguire a headshot or full body shot?,headshot,bd8ec1c87919c209316aeb7955879a78,2f873d8e7e392d6a1b168b945ff9a1a8.jpg,photo| Paul Maguire| headshot| full body shot
+Which garment is on the arm of the dancer on the Greenwich Village (film) poster?,glove,7ffde61f3a95f73935d12cf3dfb7e01e,39b35178165c4a5e874d012773193712.jpg,garment| arm| dancer| Greenwich Village (film) poster
+What type of animal is featured in the Al-Arabi SC (Qatar) logo?,bird,b8025b4025ebc4d2e3fa3fd1609bcb66,a0f1225bcd06ec4de4d7b6cfc6637bca.jpg,Al-Arabi SC| Qatar| logo| animal
+What color is the man's shirt in the cameo appearance photo?,pink,7e773173ee07be8859efb9191e74d8a7,d1f85ffbdc248cdd8d0e161e1ddbd71e.jpg,cameo appearance photo| man's shirt color
+What is Niels Arestrup wearing on his head?,sunglasses,8a690c1090eac6da4aed316d3beaab31,e0e400fa90b216d838183dc0e5d58ad1.jpg,Niels Arestrup| wearing| head
+What color coat is Stephanie Edwards (Grey's Anatomy) wearing?,white,b8e3e4ce98516708bfc783826b8b5dd1,de4e3e50ae3b5f66487203246206e1bc.jpg,Stephanie Edwards| coat| Grey's Anatomy
+What unusual feature does the horse have in the poster for Clash of the Titans?,wings,a4f94622095bda9ef4e58cbdd1c5a603,5f6385b7d49c491e828b6f7edb5c857a.jpg,poster| Clash of the Titans| horse| unusual feature
+What color is in the foreground of Zekū,black,dd49b0f11ae8b7b70650cb72a7b0f1ab,8cde2f85b5d23b4b2eb5716e0d940023.jpg,Zekū| foreground color
+What color shorts is Rohan Bopanna wearing?,green,2e7743cd44b31615fd084e917eb16aea,c2044be7619dc8fa4fb7ff3956c91e94.jpg,Rohan Bopanna| shorts| color
+What is this man wearing around his neck in this photo from the 2016 NFL season?,tie,1c7e8ec5983003dacd256feebd809d98,671f0c6d5e5d44768419cd5975030e50.jpg,man| wearing| necklace| photo| 2016 NFL season
+What color metal are the Canadian Screen Awards statues?,gold,7bc453c462e706ee16651670848ee405,c412a87c86d2e864d967d525bfe808a5.jpg,Canadian Screen Awards| statues| color metal
+What shape is the logo for Relativity Records?,rectangle,3a77a925fd3163ccb890ff8ff52c64ef,15b5124cbe84eafb230061aaa8dbc288.jpg,Relativity Records| logo| shape
+What is the main color of the ball in the York City Knights logo?,white,7c11cb6a009dcf4828ac3f59bab8c7c4,d134fc0aa538c14f1e726fc0fb764aba.jpg,York City Knights| logo| ball| main color
+What animal is featured on the statue in the middle left of this collage of Liverpool?,horse,938da5676a7dfc85000936fe87f84bb4,115e9a9f892b51c87529447d327f54b3.PNG,statue| Liverpool| animal
+What is the shape of the large building in Oxford?,circular,f9661a42e82f9bed50e3fbb0412d50c8,be29ca5b40f635e1fd42abec7481f24d.jpg,large building| Oxford| shape
+What is growing out of the bear's back in Berwick Rangers F.C.?,tree,a6f24dae9ef6ef3503aef23084f75ead,360273e63e31c862e94fe3aa9e9d18d3.jpg,bear| Berwick Rangers F.C.| growing out of back
+Do both uniform options for the 2014 New Orleans Saints season include beige pants?,yes,85b852960ab4f352c376e7c1ccd973f8,a20f058b2e563877c6c45cec1e1afeac.jpg,2014 New Orleans Saints season| uniform options| beige pants
+Which sport is being played on a picture of M&T Bank Stadium?,football,3f61125f86c54ba08a0ae11a5b25be0d,86c0b5c683e48b980e0fb446e5f758e5.jpg,M&T Bank Stadium| sport
+What color is the background of the logo for the corporate sponsor of Lang Park?,green,79fa8a852c04de4ae92c78cd04f10e98,2471de79891ff90b88d604d980416897.jpg,background color| logo| corporate sponsor| Lang Park
+What is Aaron Paul holding in his left hand at the 36th Saturn Awards?,trophy,57580df17f8a77418d7f77af8cd8e6bf,11c83f9255a2c44a05159e41095a7402.jpg,Aaron Paul| left hand| 36th Saturn Awards
+What is the length of Harry Fowler's hair?,short,3bf0be7361dd4c098970e06d7675b161,7dadf89e87a976f4fce44e351de950a3.jpg,Harry Fowler| hair length
+What type of earrings is Lady Gaga wearing?,pearl,c0b54476aeb0ad69aae3a3a07c5b0972,1661f407d0c551a5a7e790f9de55ca22.jpg,Lady Gaga| earrings| type
+Is there more than one person in the title shot for Malcolm in the Middle?,no,dc4066f1ab7382c5faa1c66fbd103f8d,805c628ab2c4c8396f9c58ce1e2efc95.jpg,title shot| Malcolm in the Middle| number of people
+What color is the line depicted on the poster for The Wire?,blue,76017f5585fb4a3ad937c84c85ca7635,02083fab499fc23081c1bec576785c13.jpg,poster| The Wire| color| line
+what facial hair does K. J. Yesudas have,beard,17dd5c2897c622a18a1ffc6110c85e2f,147239f0f39254399cbd7291f16ceab0.jpg,K. J. Yesudas| facial hair
+What color are the uniform pants for the 2013 Pittsburgh Steelers season ?,yellow,8df778cf7e67d221b7e0305857adaae0,195d66af95a1a0df57100eeaad9982a8.jpg,uniform pants| 2013 Pittsburgh Steelers season
+What type of racket is Liezel Huber holding?,tennis,da0ceff5e3e9ab4582b101b3585ba37d,8f5987661fa880bf8fc3e9283f53a055.jpg,Liezel Huber| racket
+What color is Ivan Lendl wearing?,orange,5b1be052cf24213b998144d237ddecaa,a6efb89f9bb09b34cefce8fee9f5a0fd.jpg,Ivan Lendl| color| wearing
+Is Catherine Tate smiling or frowning in this photo?,smiling,287ec0d4de70e3fa19e55b3fb59b7c23,f4ec9c0ddb259c6e7bb6b8ed1c8f970d.jpg,Catherine Tate| smiling| frowning| photo
+What color is the circle surrounding the Fatih Vatan Spor logo?,red,55be001c9b7fce6e9589b87011574471,994127ac63cd6e2e255dc6806e306503.jpg,Fatih Vatan Spor| logo| circle color
+What are people standing on in the bottom right photo in this collage of Chicago?,grass,3322e5824cfbc40968ca24e289486d6c,f6e8afb2fd16002d527cc6d2dfb73f34.jpg,collage| Chicago| bottom right photo| people| standing on
+Are thre players on the field in this match of the 2013–14 UEFA Europa League?,yes,f91a85c560b96fa27e539954d8c20de2,15ddf62124806e670c4219310083a5a2.jpg,players| field | 2013–14 UEFA Europa League | match
+What shape is the top portion of the Saturn Award?,circle,980677c2ed1e82728413f9534802c212,7f9aeb9e7aa38a277904fbff85f44552.jpg,Saturn Award| top portion| shape
+What protective gear is the FC Utrecht logo shaped like?,shield,461c3e827932abad1a825e0ae833dc17,21d518156cadb72a925cc173f55ef31e.jpg,FC Utrecht| logo| protective gear
+Does South of Nowhere have more white or black people on it's logo?,white,07fe7be521cb5a696c87a0a86ff88d04,4f55fe3a8da7700dfab0b7ca3bdd9636.jpg,South of Nowhere| logo| white people| black people
+What is on Martin Finn (hurler)'s head?,helmet,8b00fbc72cb4e263ed1f2fe950b7f14b,3bf5208118cfdf42e939cd414eef192b.jpg,Martin Finn (hurler)| head
+Is Regis Laconi wearing a purple uniform?,no,2dc55478860590e5323cd0e90ad9811d,10376342920dff778b4b100d38f8f2b7.jpg,Regis Laconi| purple uniform
+How many people are shown in the poster for How I Met Your Mother?,four,08f3a8eb12378a9d90d7c567afe3e3c3,e580ab222a31d52bd4992d40dd1bf548.jpg,poster| How I Met Your Mother| people
+What is the top of the Golden Globe Award shaped like?,globe,d92cf09e11d74f9c2e24c05d625c8ae2,450b38ea4878892809b162629204f150.jpg,Golden Globe Award| shape
+Is there a bird on the logo for Al Shabab Al Arabi Club Dubai?,yes,d121dbf9201d225e5f4bbf3a4670bd14,6a73e2198d549c455521f8b4d038b1c4.jpg,bird| logo| Al Shabab Al Arabi Club Dubai
+What sport is Mounir El Hamdaoui playing?,soccer,711823eb03b25bf015293abd20e66bd6,b4c86e43697c077ab6097e15e18ec5c6.jpg,Mounir El Hamdaoui| sport
+How many stars are on a Roy Makaay's kit?,one,ada348ad093a712e01e2f9c0c5964b02,4dcad69cdbc6d6787bda154aaa4830ff.jpg,Roy Makaay| kit| stars
+What object is on the bottom of this logo for Gymnastics at the 2004 Summer Olympics?,trampoline,89533cee844f1a475cfb57dad4d028cc,d29f0b2909abc7e11b7abde5bf37b73d.jpg,logo| Gymnastics| 2004 Summer Olympics| object
+Did Elvin Bishop wear overalls on stage at the Boston's on the Beach performance?,yes,bb3bb54410b841795b7b5aee707bb6f6,7cc1b63faa3d96806590de956511747b.jpg,Elvin Bishop| overalls| Boston's on the Beach| performance
+Are the stadiums empty at Russian Premier League?,no,27e23a91212c7eb42059b88e824f7cc1,0d3faec7c88d6d8eda71961d476accf3.JPG,stadiums| Russian Premier League| empty
+Is the barb wire on the poster for Foyle's War in a blue colour?,no,680ad18ef1349910625f6ff733c9bcad,e5c0cf9e4066c26a5affcb012073b12d.jpg,poster| Foyle's War| barb wire| blue color
+What color makes up the background of the 1995 Carolina Panthers season logo?,black,33763a9c81632e1f912fadefd5d6533a,29ef04cdeeadee4c6755fd69775719c3.jpg,1995 Carolina Panthers season| logo| background color
+How many uniform combinations are shown in this photo for the 1995 St. Louis Rams season?,two,f8c2868b7df9032c5484f59e20952dde,30a7fd09d9cbe84cd52c845b9bae0893.jpg,photo| uniform combinations| 1995 St. Louis Rams season
+How many different colors make up the RCA Dome logo?,two,1e741fa4e3ee974461a5b09d9ac44bbb,e9a0a0f30dd2ffb051299c68942943fd.jpg,RCA Dome| logo| colors
+What shape is at the center of the EFL League Two logo?,circle,97e36d22aebc632ca3bb06307a5e3be9,16ef61d804847c65b49e132b47560934.jpg,EFL League Two| logo| shape
+What is the crouching man holding in 800 metres?,camera,0261558127c48759da3d141f39e532e4,de14107bed1e6731e9e99cc782610989.jpg,crouching man| 800 metres| holding
+How many different pictures of Moscow are seen here?,six,2926c9e79ebd38dc2fbd4b8741312d84,185faeb924ab4a7640a97d3dbfb702a7.jpg,pictures| Moscow
+What sport does John Sadri play?,tennis,2c7eb77db0291eeb45e4280235058900,38535587c87291af2915fa75a168e322.jpg,John Sadri| sport
+What is Fabolous wearing over his eyes?,sunglasses,3ba53c38a2334ce07b52e0ead159e00c,9a55b55bed5e334897519910d58e642d.jpg,Fabolous| wearing| eyes
+What type of plant is seen in the A Country Practice screen?,tree,20c01c497b0509cc905edeb102937533,bc574536843c7647c8a25d3202de296e.jpg,A Country Practice| plant
+What color is the outermost layer of the logo for Burnley F.C.?,yellow,73b87bb89329c830512b669e9fe36e21,b95286acbb525edd9a1171deef37ee48.jpg,Burnley F.C.| logo| outermost layer| color
+What color shirt is Ed Sheeran wearing?,black,999f5e2e7d3e91808ced5907d5c97bd0,015e36f5b89b638a3daf5b946df292ae.jpg,Ed Sheeran| shirt color
+What type of facial hair does John Lennon have besides a moustache?,beard,d5bca06b976791c90ef1a6be2d67e64d,417654ed1d18bef7bef493f6775333b2.jpg,John Lennon| facial hair| types| moustache
+What overall shape is the logo for Rochdale A.F.C.?,circle,612f6e26528ec76ba9063d42e7e20a4e,e163093b245c3f7bae44dd6236fefb9b.jpg,Rochdale A.F.C.| logo| overall shape
+What color is John Merivale's name printed in on the Caltiki – The Immortal Monster poster?,red,260ddf8cfd8839a6b91963dadf863dc1,86b8607e1be77030d370e37ce674a490.jpg,John Merivale| color| Caltiki – The Immortal Monster| poster
+What direction is the arrow in the sign pointing in Amsterdam?,up,7aa92d67f7643a9ac4584c95fe3ea1bd,f4b3caeb787706d2ad5e2fa8ead5c564.jpg,arrow| sign| Amsterdam
+How many uniform options were there for the 2004 New England Patriots season?,three,1b3d5c8b5c9882387eda16705172626e,651dc1fce2b48020359dac0e7a64f23d.jpg,uniform options| 2004 New England Patriots season
+Are the same two colors present in both uniform options for the 2004 New York Jets season?,yes,6439611676e451a2ac24859539660706,ac4634c38e24bf329e543256bc5c938a.jpg,2004 New York Jets season| uniform options| colors
+How many photos of Melbourne make up this collage?,six,b1e3471501fed319044afd363afc295a,805c628ab2c4c8396f9c58ce1e2efc95.jpg,collage| Melbourne| photos
+What kind of animal is in F Is for Family?,dog,09600af2a9cce8c6098312744d8e1195,dbaa980b83142576c1a98e1945b29bc7.jpg,animal| F Is for Family
+How many stars are on the  Mississippi state flag?,thirteen,33002a89d4b97618a27a90454ef225f6,97e36d22aebc632ca3bb06307a5e3be9.jpg,Mississippi state flag| number of stars
+What is Garbiñe Muguruza wearing around her neck?,necklace,09b2fcc95ca550c9b210d1a7e5be63fb,2289f50bb6dc929b2fee85efe03880e4.jpg,Garbiñe Muguruza| neck| wearing
+What white shape is in the middle of the logo for The X-Files?,circle,f3f5c6d1ba2c3b2636f70af0dff1e52e,a8a6f7ca9448a3ab85917384fe18cfae.jpg,logo| The X-Files| white shape
+"How many different pictures of Richmond, Virginia are shown?",six,6678605c214548a9683bfcb502376e7b,d21ffa7e4cad81b3316a985b70ea7e1f.jpg,"pictures| Richmond, Virginia"
+What is the goalie wearing on his left hand in this game of Ice hockey?,glove,85856853286b86bc98841ffc322e63f1,5d107bb5a4062da61c892620a2880928.jpg,goalie| left hand| ice hockey game
+How many yards long is an arena field from goal line to goal line in Indoor American football?,fifty,278525f1f86badde1927ca64bf2e9612,8e023aad7a165875be9f8aff6cd83d5f.jpg,arena field| goal line| goal line| Indoor American football| yards long
+Are characters on a movie poster for Guardians of the Galaxy all human?,no,29c64789d397154f2d3933e2aa6c7c0b,45eaf2cf4472def28a689b4734d447e9.jpg,Guardians of the Galaxy| movie poster| characters| human
+How many white stripes are on the flag for the United States?,six,4c6e0c8d6b9223bd435809e52eecd008,3092db3eb2e5ad618bcc5d9c50c4d8b4.jpg,flag| United States| white stripes
+What object is directly in front of Carrie Underwood's mouth?,microphone,c9c97cbc77353164913fcf9082ec76d9,3eecfc9a64d80125c302670c7e95ddc5.jpg,Carrie Underwood| object in front of mouth
+Is the CSI: Miami poster multicolored?,yes,cd64afd2bfaaf9085b41c00a8d27423e,fb77f93793830af3331f0a56304320b4.jpg,CSI: Miami| poster| multicolored
+What item is in front of Martin Kove?,microphone,a8f1ae4dbf26375636387a795faeb5c1,8cffe741270087e7ddbae3bccce6171c.jpg,Martin Kove| item
+What color is Sarah Douglas (actress) shirt?,blue,041850968f7587dff62be7a949061c1f,e1833999ee712ba537b52a85d02a36b4.jpg,Sarah Douglas| shirt| color
+What gender is the person on the far right of the McMillan & Wife marquee?,female,890a4d313aa8b5e3c7adb258b2eb8538,97e36d22aebc632ca3bb06307a5e3be9.jpg,McMillan & Wife| marquee| person on the far right| gender
+What general shape is the white logo on the left side of the shirt Lionel Messi is wearing?,triangle,be7a87387da9733e2ac502169bd88308,3ab2539f253c781a16710ea666bab33b.jpg,white logo| shirt| Lionel Messi| shape
+What color is Hans Zimmer's jacket?,blue,13b22b6ee9cc52c5682d94d8fd1a71b9,7891c7393d68e9ac848e09af1d7d3cd9.jpg,Hans Zimmer| jacket| color
+What is in the center of the badge on the Blue Heelers title screen?,crown,7ca735451cb4367a489f6bb1362dca34,0c2ca92260f58eceef80371b552068f2.jpg,badge| Blue Heelers| title screen
+"Aside from grey and white, what color is used to designate the Tiwi language on this map?",purple,d6c9eca572876e8a98acdc8e9b14e2d0,f9661a42e82f9bed50e3fbb0412d50c8.jpg,Tiwi language| map| color
+What type of animal is the Wales mascot?,griffin,b6ec23d244fa169d87aec926efcdb748,469ed4d7f893593019a61bb246c4cf5c.jpg,Wales| mascot| type of animal
+What color besides black is featured on the logo for Jordan Grand Prix?,yellow,d969ceafa603334eaac0474944681348,9704dde5bad706d20d4cedc28a694d1f.jpg,Jordan Grand Prix| logo| color
+What sport is Roberta Vinci playing?,tennis,bcc7c9bd8716794de4bd450dda989eb5,b5631af079c3abc819ad8d1b2d098a9d.jpg,Roberta Vinci| sport
+What shape is the The O2 building?,dome,e979e0be8ca1fc36e3d853ae36ace832,b7e07113dff43d926a96d307c78a61a5.jpg,The O2 building| shape
+What is Davy Condon holding?,award,f2df787ddb739cf61fa0a2279e3af0d0,554dbe806142b6a5bbd097b2f2451eea.jpg,Davy Condon| holding
+Does Luke Perry have grey facial hair?,yes,efcc5fa1328e8742b13bbfccbcf2c232,dfcd921d54971e95264bb669f3a3fa9a.jpg,Luke Perry| grey facial hair
+Is Seville located along the water?,yes,0104fcb6f187a97b5cdd21cf1f41ab44,e67dc741da5e752509a5b2c78eea84ef.jpg,Seville| location| water
+"Is there a snowman shown in this collage of Charleston, South Carolina?",no,147d4bc8d2a2bb0379e9f1263cbe47be,68045fa2ea6c8378820305668728aac7.jpg,"collage| Charleston, South Carolina| snowman"
+The shadow of what animal is present on The Omen poster?,dog,36413089260bded4abaeca951f32f174,6c6f3c3d204c5a06cc812fce214734b1.jpg,shadow| animal| The Omen poster
+What is surrounding the house in the logo Chesapeake Shores?,frame,7b4e31800bf90f3fcb2948e78914acfb,a60ba6966a8a070684a4eb0fa608ca31.jpg,logo| Chesapeake Shores| house| surrounding elements
+what color are the shoes on all the cheerleaders in Bring It On (film)?,white,75ef8be820c448b5dec2d18e14bdd02c,2e4accb0afaed12461bcb65fcfc19859.jpg,shoes| cheerleaders| Bring It On (film)
+What object is at the top of a Golden Globe Award?,globe,d92cf09e11d74f9c2e24c05d625c8ae2,b86fe7d4f2e284666107819d0c6a0a82.jpg,Golden Globe Award| object at the top
+What shape is the Oldsmobile logo?,rectangle,8412e97a71a0509d0bd56fb6631005f1,9054c0e0d68ae514689303cdad3bf93b.jpg,Oldsmobile| logo| shape
+What is the dominant hand of Andy Murray?,right,db44e12c5043127259bd8b8987217e8d,f6bd0b86045fdc110ecfd35e9a1ba140.jpg,Andy Murray| dominant hand
+What is the woman on the 102 Dalmatians poster holding?,umbrella,4fc83bb59563f3e3563cd0ba0bc7952f,2a00c2931f0b2fade49e2e414a1ecf8f.jpg,102 Dalmatians| poster| woman| holding
+Is Roger Federer raising his right or left arm straight up in the air?,left,bbe3fb29732649f55774d833c9d431f5,376754152a46878eaf389abe15d75c53.jpg,Roger Federer| right arm| left arm| raising arms
+What object is the NAC Breda logo shaped like?,shield,525c69a5b0b7ef87c24bf2707b429375,60089057e668a0cef73449ba217d8a96.jpg,NAC Breda| logo| shape
+What type of animal is depicted on the Atletico Madrid flag?,bear,5b2d30b7a13ff697030dde9488b0a88a,af0abc68a36192cf0ce973a136d2e7e9.jpg,Atletico Madrid| flag| animal
+How many lights are on behind Michelle Connor?,two,fdc4fa29fdff44e7460d4f79e01587f6,ab1f1c160767c006069e6a65e7ab4187.jpg,lights| Michelle Connor
+What color hair does Claudia Joy Holden have?,brown,c033ef125e48eb0ce4f8012968c9422e,482b21d2edd92b1c0a0ca4f904cd9337.jpg,Claudia Joy Holden| hair color
+What is the winner of the Filmfare Lifetime Achievement Award wearing in her ears?,earrings,5369a7f8f1ba2414a040ae9964d2643d,140b9da858f29403cdb4b7439a15f536.JPG,winner| Filmfare Lifetime Achievement Award| ears
+What shpae is the roof of the building on the lower left in Oslo?,triangular,38323c3775fd78c157c8058a82aa7b43,0fa000530623d110c221c652a42b0308.jpg,building| roof| lower left| Oslo
+"Considering the Screen Actors Guild Award, what is the statue holding in it's hands?",masks,4b4874b71511ec081e5d3eb0d3547571,db02e1c3b5c29be81e796c08ddbdbc2a.jpg,Screen Actors Guild Award| statue| hands
+Is the statue featured in this collage of Dublin a man or woman?,man,20753dd86d2fa870fd4352cc8fec3cd8,08f3a8eb12378a9d90d7c567afe3e3c3.jpg,collage| Dublin| statue| man| woman
+How many earrings is Kate Mara wearing in her left ear?,two,9236ff4ef9e1611603da6d9a64666791,23eb27c7a18f09b978bf7a9944ff1194.jpg,Kate Mara| earrings| left ear
+Does the Saving Hope title screen show the inside of a building?,yes,e2024537f3ed1bd7b574af483096bc12,96c7af79fdd893a44fabf2799070879f.jpg,Saving Hope| title screen| inside of a building
+Is there a bridge in this collage of Dusseldorf?,yes,9de4b17dee13f58bfb7c7aa88f62d6c5,e2024537f3ed1bd7b574af483096bc12.jpg,collage| Dusseldorf| bridge
+What color is the background of Midsomer Murders poster?,black,d71b16c10c5956cb8f40be64a4838499,53afd16158b60f0d1f75d18f3fd9126e.jpg,Midsomer Murders| poster| background color
+What color is used to highlight Malayalam on the map?,blue,663b08b312f5c05bea76339938291748,6c6f3c3d204c5a06cc812fce214734b1.jpg,map| Malayalam| color
+What symbol is the logo of Jane The Virgin trying to represent?,sun,acb1f2cc144c5fdea691acc9f03f20bf,3bf5208118cfdf42e939cd414eef192b.jpg,logo| Jane The Virgin| symbol| representation
+Does the Doctors (2000 TV series) take place in a city with high rise buildings?,yes,b01b873a6dc08e03e5a49eb290987c88,be2a001f59fcfe989a53c9f12aa82b0f.jpg,Doctors (2000 TV series)| city| high rise buildings
+What type of ball is featured on the Southampton F.C. logo?,soccer,9ac8a39185a2a7aa8d90c9fcff528a3e,4ff83a3c8daf4e06dcdff4b2a9b38dd9.jpg,Southampton F.C.| logo| ball
+Are the stripes in the upper right of the FC Barcelona logo vertical or horizontal?,vertical,ad20afe31bcbfb2836998dbfa0ddbfa6,4ff83a3c8daf4e06dcdff4b2a9b38dd9.jpg,FC Barcelona| logo| stripes| vertical| horizontal
+What is Olivia (Twelfth Night) holding over her head?,veil,57edbef400cf3f25d1b30366e6dfbed4,9011353641b5d31ec58b1ee277e06628.jpg,Olivia (Twelfth Night)| holding| over her head
+What is the round object on the poster of Hank Zipzer (TV Series)?,globe,eac109f9fd9202c127f83291c0dd9fb7,26dd5aadd384261b0dc6cf1acd4fab29.jpg,poster| Hank Zipzer (TV Series)| round object
+What is the color of the background for the New Girl logo?,black,2659209d4248bf4b679907fbf576bcfc,bebe30891477543bad402ff87a47b39f.jpg,New Girl| logo| background color
+Is the background red in the logo for The Bill?,no,37f99741195ab2045e7b135d488d4be9,fd87f625e657dd1c777fa59a0f923cec.jpg,background| red| logo| The Bill
+How many members are in the group Outlawz?,six,c163679fd6dcdb58444ac783d47f1b3c,4f55fe3a8da7700dfab0b7ca3bdd9636.jpg,members| Outlawz| group
+What color is the scripted writing in Knots Landing?,black,5f058664682b34a97f80b18a51d6e161,3d1608d6b3eb89709d8f97dbe248e7ef.jpg,Knots Landing| scripted writing| color
+What is the background color for The Bold and the Beautiful poster?,purple,3a702e422f184e8ec478a8f429e66bbe,fef886528549e69792735fe6cd4a4728.JPG,background color | The Bold and the Beautiful | poster
+Are the train tracks occupied or empty in this photo of Bricktown station?,empty,fad4064b21dd08b4e60b266b5fe82287,86557e5195108e5621900ea9e2458c52.jpg,train tracks| Bricktown station| photo| occupied| empty
+What is the journalist holding in her hand?,microphone,003cfd2f506d1f54045a147ff0d9db89,26f0b342ac629d01e4ee5a69d4aac018.jpg,journalist| hand
+How is Mika Salo feeling?,happy,715cbebb50a532bdf46cf47c50782ccd,865ad58d68821cdedf240d1217e82b53.jpg,Mika Salo| feeling
+What is in the center of the blue section of the Lensahn logo?,antlers,34d5ce68dc9252e1246f2ad440f5fe2d,c9db1e7811de7139fae53d552a5d678c.jpg,Lensahn logo| blue section| center
+What shape is seen in orange near the center of the Doctors (2000 TV series) screen?,circle,b01b873a6dc08e03e5a49eb290987c88,3f69cd396566b100b8245c5e3ddf021d.jpg,Doctors (2000 TV series)| orange shape| center
+What animal is being ridden here with Barry Geraghty?,horse,7b36cf429373f0e91c6a009495349e8a,74c925babb2c2f14183c498b8a6e123a.jpg,animal| Barry Geraghty
+What type of head covering is shown on the flag for Queensland?,crown,f6909224eb6c005422b55367e78a299c,1a881114c1f7f4fa8203c3f4f5559629.jpg,flag| Queensland| head covering
+What is floating in the sky at the bottom of The Shannara Chronicles?,clouds,f5784a2ce19297b2482e7568f119d9a2,04efc3408a15848ab446ddc2d4d2bd13.jpg,The Shannara Chronicles| floating object| sky
+Is everyone in the picture a part of the National Hockey League All-Star Game?,no,1809fb2fcd8db565a75f9c6ec1fd6cb9,e5585615464800f8d4f0ce2d6daf203b.jpg,picture| National Hockey League| All-Star Game
+What is in the distance past the outskirts of Annemasse?,mountains,2474d919f95822fe10236ab6f78b838d,522ba6b4677b1ebf45876c228ff908ca.jpg,Annemasse| distance| outskirts
+Are the stands completely filled with fans in this photo of the 1999 NFL season?,yes,4e13d6f96d479400abde4c6eba6839d3,f5433db20aece490c83b611f8bb15902.jpg,stands| fans| photo| 1999 NFL season
+Are there fans in the stands in this photo from the 2001 NFL season,yes,554dbe806142b6a5bbd097b2f2451eea,731345ee22f49aac943208dc3ca3db1f.jpg,photo| 2001 NFL season| fans| stands
+"In this photo, does Jay-Z have a buzz or an afro hairstyle?",buzz,7fc7cc227609bc51a14202c9236c88e7,48d45c1aed3a6b7e0e762ff5230d5b5d.jpg,Jay-Z| buzz hairstyle| afro hairstyle| photo
+What structures are located left and right of the entrance to the venue for season of 2006–07 in English football?,ramps,405d53eff299be08d298e48fbfae2a75,76b808b06cade21af908295d4ba85e25.jpg,venue| season of 2006–07| English football| structures| entrance
+What color is the Young Artist Award?,gold,4dc9a266ce709b4c805e7d3543ba9d42,e1c10cc7b7ed31460d25b12852546acd.jpg,Young Artist Award| color
+How many different pictures of Copenhagen are seen here?,four,f4b3caeb787706d2ad5e2fa8ead5c564,29ef04cdeeadee4c6755fd69775719c3.jpg,Copenhagen| pictures
+What color is at the end of the sleeves on David Ferrer?,white,f6b033b9422406514eaf9cdea7c6e4d2,a1c032156702bf6e910b5a6a1520718a.jpg,David Ferrer| sleeves| color
+What color is the background of the The Vampire Diaries title screen?,black,248ed349c0ddf0263b1cdd9ea96c44a8,015f860efb98b6a068b3d88835215e76.jpg,The Vampire Diaries| title screen| background color
+What kind of racket is Ruben Ramirez Hidalgo holding?,tennis,29e399e2ef0475aba35057d90f24f6e5,1edc090d95fad784094f6953691b98bc.jpg,Ruben Ramirez Hidalgo| racket
+Is Yeh Rishta Kya Kehlata Hai an English show?,no,bbf15f028a057551beda7b4a6b49e0a9,09c20492a5dec75919a9f295cbec72dc.jpg,Yeh Rishta Kya Kehlata Hai| English show
+Who is Mann Kee Awaaz Pratigya holding?,child,423c6727cbcd26882c7534266e7476fc,8fdebc3993f3eacce0636d02d2088052.jpg,Mann Kee Awaaz Pratigya| holding
+What color hair does Stacey Sutton have?,blonde,b0a6b9576c76bc42c35e758088eb37a4,6b9bc4e8a25963ee1a9523e0b21ed133.jpg,Stacey Sutton| hair color
+Is Lubomira Bacheva wearing a crown?,no,137cfab12e2f88da179f2838ef58de4a,10b8e48182486a3da252cc0eb6c7a80b.jpg,Lubomira Bacheva| crown
+What is Conchita Martínez wearing on her head?,headband,c59a9435d6c2a4b2b995cb7568334af2,7821f104c95e9af9e30b2e61e4ece616.jpg,Conchita Martínez| wearing| head
+What color is the logo for Parks and Recreation?,green,2009222be2d2a677d5dad852353ccdf0,f5d394a7e8fc1bda932f341716e16908.jpg,logo| Parks and Recreation
+What object goes over the water in this picture of Mostar?,bridge,9a246b760cde182efeafb692a1e4b62d,c04a2e52b9de5b5ab4f9d565a16e4c20.jpg,object| picture| Mostar
+What kind of aircrafts are shown in this advertisement for M*A*S*H (TV series)?,helicopters,e9c35c743a85ca59120fbdb178a1d425,ac0d561cf1a52e67347f03a173f4b227.jpg,advertisement| M*A*S*H (TV series)| aircrafts
+Does the Screen Actors Guild Award display a man or a woman?,man,4b4874b71511ec081e5d3eb0d3547571,1c6733c20b3bfafedc440e31146a2a8f.jpg,Screen Actors Guild Award| man| woman
+What is Scarface (rapper) holding?,microphone,92044b79a1d51334a6a189a43e717fa3,a916a3a24f59a1ed71d6985c376c1079.jpg,Scarface (rapper)| holding
+What time of day is it in this picture of Oslo?,daytime,38323c3775fd78c157c8058a82aa7b43,82004920cdfa205bdce9d35be70eb71c.jpg,Oslo| picture| time of day
+What structure is in the middle of the ground floor of Aventura Mall?,fountain,e392b28bc66f500ad7346814a10bb8bf,2d7c92842a69a1b37bfe72a5218290c9.jpg,Aventura Mall| ground floor| structure
+What color are the man's pants in The Book of Mormon (musical) logo?,black,c2abc6f612b397e8b19c4501f4595c70,6e275db434f72d93417b5356ccba8c57.jpg,The Book of Mormon| musical| logo| man's pants
+Is Lionel Messi's shirt striped or checkered?,striped,be7a87387da9733e2ac502169bd88308,dd428df2d5b5fbace132e795ce2c262c.jpg,Lionel Messi| shirt| striped| checkered
+Who is standing behind the catcher in this image of a Baseball game?,umpire,943207e5c2e4cd4058380ca80c618ffe,875c1c232fab181467ba75f3d1a2b8cf.jpg,image| Baseball game| catcher| standing behind
+What color is the font of the Life OK logo?,pink,db6b08e1ba55f6f2aca8990a74d0a615,589f537ec3269c3a64093bc288ad80f5.jpg,Life OK| logo| font color
+What is the main color on Hideki Matsuyamas cap?,blue,cf4cd5ed49af0c7a60757a92ad201918,50ccc7ab2db82b7feeaa3bbf6f533773.jpg,Hideki Matsuyama| cap| main color
+What kind of tower is shown in this photo collage of London?,clock,edda61d6ace989ed6a5aa01af7ffcd32,661ebf0e7bf768f51026b67b3e013090.jpg,photo collage| London| tower
+What color is between the two arrows in this UK SIngles Chart logo?,purple,5c538badbfffc0ab555dc0e384d78eec,4f5aa2ad6b5d1bc7d9f956cde914ede7.jpg,UK Singles Chart| logo| color| arrows
+How many buckles can be seen on the right leg of Michael Jackson?,three,9430640f93517c0687326e6b6ac9c1d6,b7d2e3e6db2fb1174421395e2771952b.jpg,Michael Jackson| right leg| buckles
+What animal is featured in the yellow circle of the Western Australia flag?,swan,4fbb7040e9dc9f3b5677f20a71ca72bb,055d118116e7747f15d9559b282eb9f7.jpg,Western Australia flag| animal| yellow circle
+What is the sleeve length of Donna Summer's shirt?,long,14eecd721a335cb6723095cde8ff640d,8e023aad7a165875be9f8aff6cd83d5f.jpg,sleeve length| Donna Summer| shirt
+What is Wonder Woman (2017 film) wearing on her head?,tiara,c490b849934a08cde2d594ba25c997f1,d3028a94c845c7a2bd581feb0f36ee66.jpg,Wonder Woman (2017 film)| headwear
+"On the cover for the House of Venus Show, what are the guys wearing on their heads?",caps,e6cce533be626419195519c8877425aa,4c7d4767b32732979a8fa1ff6ad5dba8.jpg,cover| House of Venus Show| guys| wearing| heads
+Are there two human characters on the poster for The Muppets (film)?,yes,e2124c4e5790650ba293fb063d5dd784,fd2e5093b889c6d46b573c7c51f6f8c7.jpg,poster| The Muppets (film)| human characters
+How many photos make up this collage of Cardiff?,seven,7245d920b914309a4c162cba5def05bf,f75c9c876e0c146ee9ac35a2e6a68af0.jpg,collage| Cardiff| number of photos
+What hairstyle does Luke Jensen have?,shaved,4cb5c72cc0afdd355a08c6de8d8b2ecd,ba5a842f2ba4dfde0f454bf5947da148.JPG,Luke Jensen| hairstyle
+What kind of facial hair does Sean Penn have in this photo?,moustache,9213ea6681d4b5a51bb969401d970af5,360273e63e31c862e94fe3aa9e9d18d3.jpg,facial hair| Sean Penn| photo
+Does John Leguizamo have a happy or neutral expression in this photo?,neutral,e2c0e01bded50615c826b101f4a669a5,6e73496095cdf2a423dc6813bef5b21a.jpg,John Leguizamo| photo| expression (happy| neutral)
+What color is the necklace worn by Gary Anderson (darts player)?,gold,d7197eb6db1990acda78fbb6cb8bc5aa,65ac0f1c70c743739c9b908105763593.jpg,necklace| Gary Anderson| darts player
+What game is played by Mensur Suljović?,darts,d978309d37f1b646d04a41e6387b2d28,8ad8bcea430f123afb37392598e483b1.jpg,Mensur Suljović| game
+What animal is pictured on the Poole Town F.C. logo?,dolphin,223fbc38a5bfc93009e46a66b524b788,6c54ddcbf23e908bdc4c0717a22e7c0c.jpg,Poole Town F.C.| logo| animal
+How many vehicles are in front of the Royal Court Theatre?,two,c1403c696634ae69e2250d6dd7e0ff99,c1403c696634ae69e2250d6dd7e0ff99.jpg,vehicles| Royal Court Theatre
+What is the primary color of the center house in the Too Close for Comfort photo,red,0e680f0055a11753192ca6430e57e05e,9d931a861d2b9e9be0071b56fcd5dbfe.jpg,Too Close for Comfort| center house| primary color| photo
+Who watches games here in Cleveland Stadium?,fans,ea767c8bc8018138277c9f1d4f160de1,181f4c4db7e0550502dc6d06f114bf22.jpg,Cleveland Stadium| spectators| games
+What is Snoop Dogg wearing over his eyes?,sunglasses,e5c0cf9e4066c26a5affcb012073b12d,2dc48f2c2884a970e006f72d2324e206.jpg,Snoop Dogg| wearing| eyes
+How many buildings in Tamil Nadu have a pyramid shaped structure to them?,one,873cddb431c71a38a47ae117cfdfbde8,3f1ad910dabf48cc92e597d189b3709a.jpg,buildings| Tamil Nadu| pyramid shaped structure
+Is there a map in the West Bengal crest?,yes,7c051f8cf20f547d343ae158c0c87709,80dd3049424db3c60161c77a1be418b0.jpg,West Bengal| crest| map
+What colour is the background on a poster for Black Mirror?,black,32c4c835f094cbad9f3f24d26bb5425b,c89da6d55da456f5af59917687510759.jpg,poster| Black Mirror| background color
+What is Bobby Allison wearing on his head?,sunglasses,3f2b00a75583eaf1c59767f708b6dbc7,b5fafc9de980037c99a86c0855730a93.jpg,Bobby Allison| wearing| head
+What is Dale Earnhardt wearing over his eyes?,sunglasses,b78df266d185cefbd7f4ae8e6f17fabc,cb12de8bbd9b3b9380fadb873e960b63.JPG,Dale Earnhardt| wearing| over his eyes
+What type of hat is Richard Petty wearing?,cowboy,9f02b3c432f0114f2bc26cd2ef819be9,9524444d55ab3d7226061e0e79cd590f.jpg,hat| Richard Petty
+What profession does the siloutette figure have in the Fort Bliss (film) poster,soldier,d754ec176d2d09dfe74c8244288e00c8,448cf5efc0e0e7a1f2edeb2ea9cec878.jpg,Fort Bliss (film)| silhouette figure| profession
+Are the stars on the United States flag blue or white?,white,4c6e0c8d6b9223bd435809e52eecd008,21afca94b9b666ddebe28f69f10d81ef.jpg,United States flag| stars| blue| white
+What length is Dmitri Shostakovich's hair?,short,75fdb8ab34c3f2007fddf8c4395638e3,b95286acbb525edd9a1171deef37ee48.jpg,Dmitri Shostakovich| hair length
+What main color outerwear is Wolfgang Amadeus Mozart wearing?,red,6966304e203aac28b259671c44d3ca3e,87150e9f8c1ece6a29903820245a4d58.jpg,Wolfgang Amadeus Mozart| outerwear| main color
+How many birds are on the logo for Notts County F.C.?,two,849675804d8fd6fd365fe2c8471425bf,98561ff7511fb621200e28c27db4b741.jpg,Notts County F.C.| logo| birds
+What structure is shown over the water in the bottom photo in this collage of London?,bridge,edda61d6ace989ed6a5aa01af7ffcd32,8b16c021b5d2be01c05c4cced71b5bfd.jpg,collage| London| structure| water| bottom photo
+Is J Balvin wearing a plaid or striped shirt?,striped,0970521921609cc3f7b89fc8fb965e7d,9adc7fe51cbf25f23156174f3c2334e3.jpg,J Balvin| plaid shirt| striped shirt
+What color are the pants of the alternate uniform for the 2017 Dallas Cowboys season?,white,5383abe8d0a6ff707942ea65dbf3ab3d,55fa837245ded5eff85251a197470deb.jpg,alternate uniform| 2017 Dallas Cowboys season| pants color
+"On the poster for Friday Night Lights (TV series), how many people are shown?",two,feee5d0002dc3a05383cb615b76caf17,80b81edd28cb8c63347fe580e655dc5d.jpg,poster| Friday Night Lights (TV series)| number of people shown
+What is the gender of the person holding the baby in Family Guy?,male,ccab3cabeaf253f735b480e97eb081c1,ce729bfb98db4d4c1bf8f9c10e242aee.JPG,gender| person| baby| Family Guy
+"On the uniforms for the 2006 Indianapolis Colts season, what article of clothing has white stripes?",shirt,eb58b2968da902a43e5ca65d8efadb29,8c892ecdaebdc09729eee94236b00014.jpg,uniforms| 2006 Indianapolis Colts season| article of clothing| white stripes
+What are the players from this image from the 2006 Baltimore Ravens season wearing on their hands?,gloves,f302a55a4e8add07a2b439840c26336c,3a873b5a95ef4fe58f90fff038704b4b.jpg,2006 Baltimore Ravens season| players| image| wearing| hands
+What is all over Michael Jackson's pants legs and jacket?,buckles,9430640f93517c0687326e6b6ac9c1d6,f46a280379a5cf3c911bb48494dc5bb6.jpg,Michael Jackson| pants legs| jacket
+What color makes up most of the surface area of the 2017 Atlanta Falcons season helmets?,black,5e994d685e7bde8bea6edbce9c5c45cc,2572a8d403d1d4ca1c2fec1976427a22.jpg,2017 Atlanta Falcons season| helmets| surface area| color
+What celestial body is on the horizon on the logo for Coronation Street?,sun,450b38ea4878892809b162629204f150,5e78923beb87b9ac29567a13daad200b.jpg,logo| Coronation Street| celestial body| horizon
+Is the background of Holby City clear or blurry?,blurry,839acc5996a0a7ae011571a041cb3aa5,1df8987ca7e8339598313bfd9cafb264.jpg,background| Holby City| clear| blurry
+Was this photo from the 2013 Major League Soccer season taken in the day or night?,night,dcefbe3626378e55f696b11bcca9fcf9,980677c2ed1e82728413f9534802c212.jpg,2013 Major League Soccer season| photo| day| night
+How many stars are on the outer edge of the square on the United States flag?,eighteen,4c6e0c8d6b9223bd435809e52eecd008,76c1c0d615286b2f512effca8bf67de4.jpg,United States flag| stars| outer edge| square
+What type of animal is atop the Mumbai logo?,lion,70df27a89479f7ff67347ab2cbf62d6d,7e53d4cccd1ae8aaa47898ca7254087d.jpg,Mumbai| logo| animal
+How many people are on the painting A Midsummer Night's Dream?,six,5928fd62b73e04d50c9cb77d426795a7,60e8e56542c6fa4d20694dd0625f84ea.jpg,painting| A Midsummer Night's Dream| number of people
+What color is Charli XCX's hair?,brown,d31ef0d0b984db0eeeee2cdd139ab0e5,272955d520f50035046e07365a56f24b.jpg,Charli XCX| hair color
+What is Jack Nicklaus wearing on his left wrist?,watch,32f343ea2ced5aa241bdde3423dc9008,0d6419f12022639e7dad84327cff9e7e.jpg,Jack Nicklaus| left wrist| wearing
+What athletic symbol is on the top right of Cristiano Ronaldo's shirt?,swoosh,15a4b2250c67c910eeaf776f08b08bc8,f5cbf925ab8a92bed75b9ad81fffe656.jpg,Cristiano Ronaldo| shirt| athletic symbol
