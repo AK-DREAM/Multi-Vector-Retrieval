@@ -1,0 +1,12 @@
+python -m vllm.entrypoints.openai.api_server \
+--model "/home/keli/vllm/Llama-3.1-8B-Instruct" \
+--tensor_parallel_size 1 \
+--max_model_len 4096 \
+--max-num-seqs 1 \
+--gpu_memory_utilization 0.8 \
+--host 127.0.0.1 \
+--port 40001 \
+--max_num_batched_tokens 4096 \
+--enable-chunked-prefill \
+--disable-log-stats \
+--disable-log-requests
