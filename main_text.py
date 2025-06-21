@@ -74,7 +74,7 @@ def parse_args():
     parser.add_argument('--total_count', type=int, default=-1, help='config file')
     parser.add_argument("--search_by_cluster", action="store_true", help="config file")
     parser.add_argument("--patch_count", type=int, default=1, help="config file")
-    parser.add_argument("--agg_arg", type=float, default=0.7, help="config file")
+    parser.add_argument("--agg_arg", type=float, default=0.5, help="config file")
     
     parser.add_argument('--hashes_per_table', type=int, default=5, help='config file')
     parser.add_argument('--num_tables', type=int, default=100, help='config file')
