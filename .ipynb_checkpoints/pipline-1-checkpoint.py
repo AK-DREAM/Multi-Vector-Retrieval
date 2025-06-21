@@ -1,7 +1,7 @@
 import os
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 import sys
-sys.path.append('/home/icml01/multi_rag/RAG/Decompose_retrieval/raptor')
+sys.path.append('/home/keli/Decompose_Retrieval/raptor')
 import psutil
 
 import cv2

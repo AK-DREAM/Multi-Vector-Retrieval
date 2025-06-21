@@ -97,5 +97,5 @@ def obtain_cached_file_name(segmentation_method, model_name, method, n_patches, 
         else:
             cached_file_name = f"output/saved_patches_{method}_segmentation_{segmentation_method}_{model_name}_{n_patches}_{samples_hash}{'_not_normalize' if not_normalize else ''}{'_use_mask' if use_mask else ''}.pkl"
     
-    cached_file_name = "/home/icml01/multi_rag/RAG/Decompose_retrieval/" + cached_file_name
+    cached_file_name = "/home/keli/Decompose_Retrieval/" + cached_file_name
     return cached_file_name

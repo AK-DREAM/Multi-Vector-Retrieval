@@ -17,7 +17,7 @@ class EvaluateRetrieval:
         self.retriever = retriever
         self.score_function = score_function
             
-    def retrieve(self, corpus: Dict[str, Dict[str, str]], queries: Dict, query_negations:Dict=None, all_sub_corpus_embedding_ls=None,query_embeddings=None, query_count=10, parallel=False, in_disk=False, store_path=None, use_clustering=False,clustering_topk=500, **kwargs) -> Dict[str, Dict[str, float]]:
+    def retrieve(self, corpus: Dict[str, Dict[str, str]], queries: Dict, query_negations:Dict=None, all_corpus_embedding_ls=None, all_sub_corpus_embedding_ls=None,query_embeddings=None, query_count=10, parallel=False, in_disk=False, store_path=None, use_clustering=False,clustering_topk=500, **kwargs) -> Dict[str, Dict[str, float]]:
         if not self.retriever:
             raise ValueError("Model/Technique has not been provided!")
         if not parallel:
@@ -31,7 +31,7 @@ class EvaluateRetrieval:
                 return self.retriever.search_in_disk(corpus, store_path, queries, self.top_k, self.score_function, query_negations=query_negations, all_sub_corpus_embedding_ls=None, query_embeddings=query_embeddings, query_count=query_count,**kwargs)
         else:
             if not in_disk:
-                return self.retriever.search_parallel(corpus, queries, self.top_k, self.score_function, query_negations=query_negations, all_sub_corpus_embedding_ls=all_sub_corpus_embedding_ls, query_embeddings=query_embeddings, query_count=query_count,**kwargs)
+                return self.retriever.search_parallel(corpus, queries, self.top_k, self.score_function, query_negations=query_negations, all_corpus_embedding_ls=all_corpus_embedding_ls, all_sub_corpus_embedding_ls=all_sub_corpus_embedding_ls, query_embeddings=query_embeddings, query_count=query_count,**kwargs)
             else:
                 return self.retriever.search_in_disk_parallel(corpus, store_path, queries, self.top_k, self.score_function, query_negations=query_negations, all_sub_corpus_embedding_ls=None, query_embeddings=query_embeddings, query_count=query_count,**kwargs)
     def rerank(self, 

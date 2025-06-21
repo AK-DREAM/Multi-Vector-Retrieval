@@ -3,7 +3,7 @@ os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 os.environ["CUDA_VISIBLE_DEVICES"] = "4,5,6,7"
 
 import sys
-sys.path.append('/home/icml01/multi_rag/RAG/Decompose_retrieval/raptor')
+sys.path.append('/home/keli/Decompose_Retrieval/raptor')
 import psutil
 
 import cv2

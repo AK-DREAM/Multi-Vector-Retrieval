@@ -14,6 +14,7 @@ import cv2
 import torch.nn.functional as F
 from torch.utils.data import DataLoader, TensorDataset
 import gc
+import torch.cuda.nvtx as nvtx
 #Parent class for any dense model
 
 one="one"
@@ -227,8 +228,10 @@ def raw_score_fnc_batch(final_tensor, sub_corpus_embeddings, device):
 
     return final_scores
 
-
-
+def batch_cos_sim(a: torch.Tensor, b: torch.Tensor):
+    a_norm = torch.nn.functional.normalize(a, p=2, dim=-1)
+    b_norm = torch.nn.functional.normalize(b, p=2, dim=-1)
+    return torch.einsum('nmd,pqd->npmq',a_norm, b_norm) 
 
 class DenseRetrievalExactSearch:
     
@@ -236,7 +239,7 @@ class DenseRetrievalExactSearch:
         #model is class that provides encode_corpus() and encode_queries()
         # self.model = model
         self.batch_size = batch_size
-        self.score_functions = {'cos_sim': cos_sim, 'dot': dot_score}
+        self.score_functions = {'cos_sim': cos_sim, 'dot': dot_score, 'batch_cos_sim': batch_cos_sim}
         self.score_function_desc = {'cos_sim': "Cosine Similarity", 'dot': "Dot Product"}
         self.corpus_chunk_size = corpus_chunk_size
         self.show_progress_bar = True #TODO: implement no progress bar if false
@@ -487,35 +490,9 @@ class DenseRetrievalExactSearch:
         else:
             raise ValueError("Either queries or query_embeddings must be provided!")
         self.results = {qid: {} for qid in query_ids}
-        # if queries is not None:
-        #     queries = [queries[qid] for qid in query_ids]
-        # if query_negations is not None:
-        #     query_negations = [query_negations[qid] if qid in query_negations else None for qid in query_ids]
-        
-        # if query_embeddings is None:
-        #     query_embeddings=[]
-        #     for idx in range(len(queries)):
-        #         curr_query = queries[idx]
-        #         if type(curr_query) is str:
-        #             curr_query_embedding_ls = self.model.encode_queries(
-        #                 curr_query, batch_size=self.batch_size, show_progress_bar=self.show_progress_bar, convert_to_tensor=self.convert_to_tensor)
-        #         elif type(curr_query) is list:
-        #             curr_query_embedding_ls = []
-        #             for k in range(len(curr_query)):
-        #                 curr_conjunct = []
-        #                 for j in range(len(curr_query[k])):
-        #                     qe = self.model.encode_queries(
-        #                         [curr_query[k][j]], batch_size=self.batch_size, show_progress_bar=self.show_progress_bar, convert_to_tensor=self.convert_to_tensor)
-        #                     curr_conjunct.append(qe)
-        #                 curr_query_embedding_ls.append(torch.cat(curr_conjunct))
-        #         query_embeddings.append(curr_query_embedding_ls)
-          
+
         logger.info("Sorting Corpus by document length (Longest first)...")
 
-        # if corpus is not None:
-        #     corpus_ids = sorted(corpus, key=lambda k: len(corpus[k].get("title", "") + corpus[k].get("text", "")), reverse=True)
-        #     corpus = [corpus[cid] for cid in corpus_ids]
-        # else:
         assert all_sub_corpus_embedding_ls is not None
         if all_sub_corpus_embedding_ls is not None:
             corpus_ids = [str(idx+1) for idx in list(range(len(all_sub_corpus_embedding_ls)))]
@@ -597,10 +574,13 @@ class DenseRetrievalExactSearch:
                 print("=====Matrix-acc=====")
 
                 
-            else:
+            else:    
+                print(query_count)
+                
                 for sub_corpus_embeddings in tqdm(all_sub_corpus_embedding_ls):    
                     
                     print(sub_corpus_embeddings.shape)
+                    # 500 * 500 ~= 60s
                     
                     #Compute similarites using either cosine-similarity or dot product
                     cos_scores = []
@@ -703,7 +683,6 @@ class DenseRetrievalExactSearch:
             
             # all_cos_scores_tensor = torch.max(all_cos_scores_tensor, dim=1)[0]
             if self.prob_agg == "prod":
-                
                 all_cos_scores_tensor = all_cos_scores_tensor/torch.sum(all_cos_scores_tensor, dim=-1, keepdim=True)
                 all_cos_scores_tensor = torch.mean(all_cos_scores_tensor, dim=1)
             else:
@@ -713,7 +692,7 @@ class DenseRetrievalExactSearch:
                 else:
                     all_cos_scores_tensor = all_cos_scores_tensor/torch.sum(all_cos_scores_tensor, dim=-1, keepdim=True)
                     all_cos_scores_tensor = torch.max(all_cos_scores_tensor, dim=1)[0]
-            # print(all_cos_scores_tensor)
+            print(all_cos_scores_tensor)
             
            
         
@@ -743,6 +722,179 @@ class DenseRetrievalExactSearch:
                 # if corpus_id != query_id:
                 self.results[query_id][corpus_id] = score
         
+        return self.results, all_sub_corpus_embedding_ls
+    
+    def cat_to_device_pinned(self, tensor_list, device):
+        """
+        在 CPU 端用 pinned memory 拼接，然后一次性搬到 GPU。
+        tensor_list 中每个元素都是 [len_i, feature_dim] 的 CPU Tensor。
+        返回一个 [sum(len_i), feature_dim] 的 GPU Tensor。
+        """
+        # 1. 计算总长度 & 特征维度
+        total_len = sum(t.shape[0] for t in tensor_list)
+        feat_dim   = tensor_list[0].shape[1]
+        dtype      = tensor_list[0].dtype
+
+        # 2. 在 CPU 端申请一块 pinned 内存
+        host_buf = torch.empty((total_len, feat_dim),
+                                dtype=dtype,
+                                pin_memory=True)
+
+        # 3. 拷贝到这块大缓冲区
+        offset = 0
+        for t in tensor_list:
+            L = t.shape[0]
+            host_buf[offset:offset+L].copy_(t)
+            offset += L
+
+        # 4. 一次性传到 GPU（非阻塞）
+        return host_buf.to(device, non_blocking=True)
+
+    def search_parallel(self, 
+               corpus: Dict[str, Dict[str, str]], 
+               queries: Dict, 
+               top_k: List[int], 
+               score_function: str,
+               return_sorted: bool = False, 
+               query_negations: List=None, all_corpus_embedding_ls=None, all_sub_corpus_embedding_ls=None, query_embeddings=None, query_count=10, device = 'cuda', bboxes_ls=None, img_file_name_ls=None, bboxes_overlap_ls=None,grouped_sub_q_ids_ls=None,
+               sparse_sim_scores=None, dataset_name="", **kwargs) -> Dict[str, Dict[str, float]]:
+
+        logger.info("Search parallel...")
+        
+        # Sanity check
+        if score_function not in self.score_functions:
+            raise ValueError("score function: {} must be either (cos_sim) for cosine similarity or (dot) for dot product".format(score_function))
+        assert query_embeddings is  not None
+        if query_embeddings is not None:
+            query_ids = [str(idx+1) for idx in list(range(len(query_embeddings)))]
+        else:
+            raise ValueError("Either queries or query_embeddings must be provided!")
+        self.results = {qid: {} for qid in query_ids}
+        assert all_sub_corpus_embedding_ls is not None
+        if all_sub_corpus_embedding_ls is not None:
+            corpus_ids = [str(idx+1) for idx in list(range(len(all_sub_corpus_embedding_ls)))]
+        else:
+            raise ValueError("Either corpus or all_sub_corpus_embedding_ls must be provided!")
+        logger.info("Scoring Function: {} ({})".format(self.score_function_desc[score_function], score_function))
+        # Sanity check end
+
+        if query_count < 0:
+            query_count = len(query_embeddings)
+
+
+        print("Query count:", query_count)
+        print("Corpus count:", len(all_sub_corpus_embedding_ls))
+
+        corpus_batch_size = 10000
+        corpus_itr = range(0, len(all_sub_corpus_embedding_ls), corpus_batch_size)
+        query_batch_size = 500
+        query_itr = range(0, query_count, query_batch_size)
+
+        all_score_list = []
+
+        nvtx.range_push("search parallel")
+
+        for corpus_batch_id, idx in tqdm(enumerate(corpus_itr)):
+            nvtx.range_push("loading coupus data")
+            c_fst = corpus_batch_id * corpus_batch_size
+            c_lst = c_fst + corpus_batch_size
+
+            curr_corpus_ls = all_corpus_embedding_ls[c_fst:c_lst]
+            curr_sub_corpus_ls = all_sub_corpus_embedding_ls[c_fst:c_lst]
+
+            all_corpus_embeddings_tensor = curr_corpus_ls.to(device)
+            all_subcorpus_embeddings_tensor = self.cat_to_device_pinned(curr_sub_corpus_ls, device)
+
+            print("SHAPE: ", all_subcorpus_embeddings_tensor.shape)
+
+            subcorpus_len = [t.shape[0] for t in curr_sub_corpus_ls]
+            nvtx.range_pop()
+
+            nvtx.range_push("subcorpus_idx")
+            subcorpus_idx = torch.repeat_interleave(
+                torch.arange(len(subcorpus_len), device=device),
+                torch.tensor(subcorpus_len, device=device)
+            )
+            nvtx.range_pop()
+
+            score_list = []
+
+            for query_batch_id, idx in enumerate(query_itr):
+                nvtx.range_push("loading query data")
+                q_fst = query_batch_id * query_batch_size
+                q_lst = min(q_fst + query_batch_size, query_count)
+                curr_query_ls = query_embeddings[q_fst:q_lst]
+                curr_query_ls = [[t.to(device) for t in sub_ls] for sub_ls in curr_query_ls]
+                all_query_embeddings_tensor = torch.stack([e[1] for e in curr_query_ls]).squeeze(1)
+                all_subquery_embeddings_tensor = torch.cat([e[0] for e in curr_query_ls])
+                subquery_len = [e[0].shape[0] for e in curr_query_ls]
+                nvtx.range_pop()
+
+                nvtx.range_push("COSSIM KERNEL")
+
+                score_tensor1 = self.score_functions[score_function](all_query_embeddings_tensor, all_corpus_embeddings_tensor)
+                score_tensor2 = self.score_functions[score_function](all_subquery_embeddings_tensor, all_subcorpus_embeddings_tensor)
+                
+                nvtx.range_pop()
+
+                # tmp = score_tensor2.split(subcorpus_len, dim=1)
+                # score_tensor2 = torch.stack([torch.max(t,dim=1)[0] for t in tmp], dim=1)
+                # tmp = score_tensor2.split(subquery_len, dim=0)
+                # score_tensor2 = torch.stack([torch.prod(t,dim=0) for t in tmp], dim=0)
+
+                nvtx.range_push("OTHER KERNEL")
+                # 分组 max over subcorpus
+                sf = score_tensor2.transpose(0, 1)  # [subcorpus_tokens, subquery_tokens]
+                c_batch = len(subcorpus_len)
+                q_tokens = sf.shape[1]
+                maxed = torch.zeros(c_batch, q_tokens, device=device)
+                maxed.scatter_reduce_(0,
+                    subcorpus_idx[:, None].expand(-1, q_tokens),
+                    sf,
+                    reduce='amax', include_self=True
+                )  # [c_batch, q_tokens]
+
+                # 分组 prod over subquery (log-sum-exp trick)
+                M = maxed.transpose(0, 1)  # [q_tokens, c_batch]
+                prod_q = len(subquery_len)
+                summed = torch.zeros(prod_q, c_batch, device=device)
+                subq_idx = torch.repeat_interleave(
+                    torch.arange(prod_q, device=device),
+                    torch.tensor(subquery_len, device=device)
+                )
+                summed.scatter_add_(0,
+                    subq_idx[:, None].expand(-1, c_batch),
+                    torch.log(M + 1e-8)
+                )  # [prod_q, c_batch]
+                score_tensor2 = torch.exp(summed)  # [q_batch, c_batch]
+                nvtx.range_pop()
+
+                score_list.append(torch.stack([score_tensor1, score_tensor2]))
+
+            curr_score_tensor = torch.cat(score_list, dim=1)
+            all_score_list.append(curr_score_tensor)
+
+        all_score_tensor = torch.cat(all_score_list, dim=2)
+        all_score_tensor = all_score_tensor/torch.sum(all_score_tensor, dim=-1, keepdim=True)
+        weights = torch.tensor([0.5,0.5]).view(2,1,1).to('cuda')
+        all_score_tensor = (weights * all_score_tensor).sum(dim=0)
+        print("all score tensor", all_score_tensor.shape)
+
+        #Get top-k values
+        cos_scores_top_k_values, cos_scores_top_k_idx = torch.topk(all_score_tensor, min(top_k, len(all_score_tensor[0])), dim=1, largest=True)#, sorted=return_sorted)
+        cos_scores_top_k_values = cos_scores_top_k_values.cpu().tolist()
+        cos_scores_top_k_idx = cos_scores_top_k_idx.cpu().tolist()
+        
+        for query_itr in range(query_count):
+            query_id = query_ids[query_itr]                  
+            for sub_corpus_id, score in zip(cos_scores_top_k_idx[query_itr], cos_scores_top_k_values[query_itr]):
+                corpus_id = corpus_ids[sub_corpus_id]
+                self.results[query_id][corpus_id] = score
+        
+        nvtx.range_pop()
+
+        # print(self.results)
+
         return self.results, all_sub_corpus_embedding_ls
 
     # @profile

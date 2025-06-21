@@ -16,31 +16,44 @@ import gc
 LABEL_T = TypeVar('LABEL_T', np.uint8, np.uint16, np.uint32)
 flag = True
 
+def cos_sim(a: torch.Tensor, b: torch.Tensor):
+    """
+    Computes the cosine similarity cos_sim(a[i], b[j]) for all i and j.
+    :return: Matrix with res[i][j]  = cos_sim(a[i], b[j])
+    """
+    if not isinstance(a, torch.Tensor):
+        a = torch.tensor(a)
 
-def singlr_query_batch_docu_cossim(sample_ids, document_embs_ls, query_embedding_ls, device):
-    final_tensor = torch.cat(query_embedding_ls, dim=0).to(device)
-    
-    sample_documents = [document_embs_ls[i] for i in sample_ids]
-    max_len = max(len(row) for row in sample_documents)
-    processed_tensors = []
-    for row in sample_documents:
-        padding_size = max_len - row.size(0) 
-        padded_tensor = F.pad(row, (0, 0, padding_size, 0)).to(device)   
-        processed_tensors.append(padded_tensor) 
-    sub_corpus_embeddings = torch.stack(processed_tensors).to(device)  
+    if not isinstance(b, torch.Tensor):
+        b = torch.tensor(b)
 
-    final_tensor = final_tensor.unsqueeze(0).to(device) 
-    sub_corpus_embeddings = sub_corpus_embeddings.permute(0, 2, 1).to(device)  
+    if len(a.shape) == 1:
+        a = a.unsqueeze(0)
 
-    cos_sim_matrix = torch.matmul(final_tensor, sub_corpus_embeddings)
-    max_cos_sim = torch.max(cos_sim_matrix, dim=-1)[0]
-    curr_scores_ls = max_cos_sim[:, :-1]  
-    curr_scores_ls[curr_scores_ls == 0] = 1
-    curr_scores_ls[curr_scores_ls < 0] = 0
-    prod_scores = torch.prod(curr_scores_ls, dim=1) # prod
+    if len(b.shape) == 1:
+        b = b.unsqueeze(0)
 
-    return prod_scores, max_cos_sim[:, -1]
+    a_norm = torch.nn.functional.normalize(a, p=2, dim=1)
+    b_norm = torch.nn.functional.normalize(b, p=2, dim=1)
+    return torch.mm(a_norm, b_norm.transpose(0, 1)) #TODO: this keeps allocating GPU memory
 
+def singlr_query_batch_docu_cossim(sample_ids, all_corpus_embedding_ls, all_subcorpus_embedding_ls, query_embedding_ls, device):
+    query_tensor = query_embedding_ls[1]
+    subquery_tensor = query_embedding_ls[0]
+
+    score1 = []
+    score2 = []
+    for idx in range(len(sample_ids)):
+        i = sample_ids[idx]
+        corpus_tensor = all_corpus_embedding_ls[i].to(device)
+        subcorpus_tensor = all_subcorpus_embedding_ls[i].to(device)
+        score1.append(cos_sim(query_tensor, corpus_tensor))
+        cos_sim_matrix = cos_sim(subquery_tensor, subcorpus_tensor)
+        max_cos_sim = torch.max(cos_sim_matrix, dim=-1)[0]
+        max_cos_sim[max_cos_sim < 0] = 0
+        score2.append(torch.prod(max_cos_sim,dim=-1))
+
+    return torch.tensor(score1), torch.tensor(score2)
 
 
 def dot_scores(a: torch.Tensor, b: torch.Tensor):
@@ -688,8 +701,8 @@ class MaxFlashArray:
 class DocRetrieval:
     def __init__(self, doc_size:int, hashes_per_table: int, num_tables: int, dense_input_dimension: int, centroids: torch.tensor, device="cpu"):
         self._dense_dim = dense_input_dimension
-        self._nprobe_query = 2
         self._largest_internal_id = 0
+        self._nprobe_query = 2
         self._num_centroids = centroids.shape[0]
         self._centroid_id_to_internal_id = [torch.empty(0, dtype=torch.int32, device=device) for _ in range(self._num_centroids)]
         self._internal_id_to_doc_id: List[str] = []
@@ -703,6 +716,7 @@ class DocRetrieval:
         self._device = device
 
         self._nprobe_query = min(len(centroids), self._nprobe_query)
+        print("CENTROIDS", len(centroids))
 
         self._document_array = MaxFlashArray(SparseRandomProjection(dense_input_dimension, hashes_per_table, num_tables, self._device), hashes_per_table, doc_size,self._device)
         # self._centroids = np.transpose(centroids)
@@ -744,9 +758,9 @@ class DocRetrieval:
 
         return True
 
-    def query(self, document_embs_ls:list, query_embeddings: torch.tensor, top_k: int, num_to_rerank: int, prob_agg="prod", **kwargs):
-        centroid_ids = self.getNearestCentroids(query_embeddings, self._nprobe_query)
-        return self.query_with_centroids(document_embs_ls, query_embeddings, centroid_ids, top_k, num_to_rerank, prob_agg=prob_agg, **kwargs)
+    def query(self, query_embeddings: torch.tensor, top_k: int, num_to_rerank: int, nprobe: int, prob_agg="prod", **kwargs):
+        centroid_ids = self.getNearestCentroids(query_embeddings, nprobe)
+        return self.query_with_centroids(query_embeddings, centroid_ids, top_k, num_to_rerank, prob_agg=prob_agg, **kwargs)
 
     def compute_scores_single_query(self, top_k_internal_ids, document_embs_ls:list, embeddings: torch.tensor, **kwargs):
         sum_sim = self.rankDocuments(document_embs_ls, embeddings, top_k_internal_ids, **kwargs)
@@ -762,7 +776,7 @@ class DocRetrieval:
         
         return sum_sim #[sorted_indices]
 
-    def query_multi_queries(self, document_embs_ls, query_embedding_ls, top_k: int, num_to_rerank: int, prob_agg="prod", dataset_name="", **kwargs):
+    def query_multi_queries(self, all_corpus_embedding_ls, all_sub_corpus_embedding_ls, query_embedding_ls, top_k: int, num_to_rerank: int, nprobe: int, prob_agg="prod", dataset_name="", **kwargs):
         device = torch.device("cuda:0")
         all_cos_scores = []
         query_ids = [str(idx+1) for idx in list(range(len(query_embedding_ls)))]
@@ -779,9 +793,14 @@ class DocRetrieval:
             start_time = time.perf_counter()
             
             query_cos_scores_tensor = torch.zeros(len(query_embedding_ls[0]), len(corpus_ids)).to(device) 
-            sample_ids = self.query(document_embs_ls, torch.cat(query_embedding_ls[idx], dim=0), top_k, num_to_rerank, prob_agg=prob_agg, query_idx=idx, **kwargs).to(device)
+
+            # use subqueries to search index:
+            # sample_ids = self.query(torch.cat(query_embedding_ls[idx], dim=0), top_k, num_to_rerank, prob_agg=prob_agg, query_idx=idx, **kwargs).to(device)
             
-            cos_scores1, cos_scores2 = singlr_query_batch_docu_cossim(sample_ids, document_embs_ls, query_embedding_ls[idx], device)
+            # only use full query to search index:
+            sample_ids = self.query(query_embedding_ls[idx][1], top_k, num_to_rerank, nprobe, prob_agg=prob_agg, query_idx=idx, **kwargs).to(device)
+
+            cos_scores1, cos_scores2 = singlr_query_batch_docu_cossim(sample_ids, all_corpus_embedding_ls, all_sub_corpus_embedding_ls, query_embedding_ls[idx], device)
             query_cos_scores_tensor[0, sample_ids] = cos_scores1.to(device)  # .cpu() 
             query_cos_scores_tensor[1, sample_ids] = cos_scores2.to(device) # .cpu() .to(device)
         
@@ -831,7 +850,7 @@ class DocRetrieval:
 
         return all_results
 
-    def query_with_centroids(self, document_embs_ls:list, embeddings: torch.tensor, centroid_ids: torch.tensor, top_k: int, num_to_rerank: int, method="two", prob_agg="prod", **kwargs):
+    def query_with_centroids(self, embeddings: torch.tensor, centroid_ids: torch.tensor, top_k: int, num_to_rerank: int, method="two", prob_agg="prod", **kwargs):
         num_vectors_in_query = embeddings.shape[0]
         dense_dim = embeddings.shape[1]
         if dense_dim != self._dense_dim:
@@ -877,7 +896,11 @@ class DocRetrieval:
         eigen_result = dot_scores(batch.to(self._device), self._centroids.T.to(self._device))
         nprobe = min(nprobe, self._centroids.shape[1])
         nearest_centroids = torch.topk(eigen_result, nprobe, dim=1).indices.view(-1)
-        return torch.unique(nearest_centroids).cpu()
+        nearest_centroids = torch.unique(nearest_centroids)
+        # print("Nearest centroids: ")
+        # for i in nearest_centroids: 
+        #     print(i)
+        return nearest_centroids.cpu()
 
     # def frequencyCountCentroidBuckets(self, centroid_ids, num_to_rerank):
     #     # Initialize the count buffer

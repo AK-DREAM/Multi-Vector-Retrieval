@@ -332,12 +332,12 @@ else:
     # text_model = models.clip_model(text_processor, model, device)
     if args.model_name == "default":
         print("start loading distill-bert model")
-        if not os.path.exists("/home/icml01/multi_rag/RAG/Decompose_retrieval/output/msmarco-distilbert-base-tas-b.pkl"):
+        if not os.path.exists("/home/keli/Decompose_Retrieval/output/msmarco-distilbert-base-tas-b.pkl"):
             text_model = models.SentenceBERT("msmarco-distilbert-base-tas-b", prefix = sparse_prefix, suffix=sparse_suffix)
-            utils.save(text_model, "/home/icml01/multi_rag/RAG/Decompose_retrieval/output/msmarco-distilbert-base-tas-b.pkl")
+            utils.save(text_model, "/home/keli/Decompose_Retrieval/output/msmarco-distilbert-base-tas-b.pkl")
         else:
             print("loading bert")
-            text_model = utils.load("/home/icml01/multi_rag/RAG/Decompose_retrieval/output/msmarco-distilbert-base-tas-b.pkl")
+            text_model = utils.load("/home/keli/Decompose_Retrieval/output/msmarco-distilbert-base-tas-b.pkl")
     # elif args.model_name == "phi":
     #     text_model = models.ms_phi(prefix=sparse_prefix, suffix=sparse_suffix)
     elif args.model_name == "llm":

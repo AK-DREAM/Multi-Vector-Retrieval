@@ -1,7 +1,7 @@
 import os
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 import sys
-sys.path.append('/root/autodl-tmp/RAG/Decompose_retrieval/raptor')
+sys.path.append('/home/keli/Decompose_Retrieval/raptor')
 
 import cv2
 from transformers import CLIPModel, AutoProcessor
@@ -681,7 +681,7 @@ if __name__ == "__main__":
         patch_count_ls = patch_count_ls[:args.subset_patch_count]
     
     if args.is_img_retrieval:
-        # print('to here~~~~~~~~1')
+        print('to here~~~~~~~~1')
         samples_hash = obtain_sample_hash(img_idx_ls, img_file_name_ls)
         # cached_img_idx_ls, image_embs, patch_activations, masks, bboxes, img_for_patch
         # if args.save_mask_bbox:

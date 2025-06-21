@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'/home/icml01/multi_rag/RAG/Decompose_retrieval/segment-anything')
+sys.path.append(r'/home/keli/Decompose_Retrieval/segment-anything')
 from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
 import torch
 from tqdm import tqdm
@@ -2030,9 +2030,9 @@ class ConceptLearner:
                 # else:
                 #     return img_idx_ls, image_embs, patch_activations, img_for_patch
         if model_name == "default":
-            cached_img_file_name = "/home/icml01/multi_rag/RAG/Decompose_retrieval/" + f"output/saved_img_embs_{method}_{samples_hash}.pkl"
+            cached_img_file_name = "/home/keli/Decompose_Retrieval/" + f"output/saved_img_embs_{method}_{samples_hash}.pkl"
         else:
-            cached_img_file_name = "/home/icml01/multi_rag/RAG/Decompose_retrieval/" + f"output/saved_img_embs_{method}_{model_name}_{samples_hash}.pkl"
+            cached_img_file_name = "/home/keli/Decompose_Retrieval/" + f"output/saved_img_embs_{method}_{model_name}_{samples_hash}.pkl"
             
         if os.path.exists(cached_img_file_name):
             image_embs, cached_img_idx_ls = utils.load(cached_img_file_name)

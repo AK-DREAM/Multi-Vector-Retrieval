@@ -122,7 +122,7 @@ def init_bbox_nbs(args, patch_count_ls, samples_hash, bboxes_ls, patch_emb_by_im
     if args.use_raptor:
         extra_suffix += "_raptor"
     
-    bboxes_overlap_file_name = "/home/icml01/multi_rag/RAG/Decompose_retrieval/" +  "output/bboxes_overlap_" + samples_hash + "_" + patch_count_str + extra_suffix + ".pkl"   
+    bboxes_overlap_file_name = "/home/keli/Decompose_Retrieval/" +  "output/bboxes_overlap_" + samples_hash + "_" + patch_count_str + extra_suffix + ".pkl"   
     
     if os.path.exists(bboxes_overlap_file_name):
         print("load bbox neighbor information from file: ", bboxes_overlap_file_name)

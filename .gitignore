@@ -33,3 +33,9 @@
 ./output/bboxes_overlap_webq_full_1_16_8_4_32.pkl
 ./output/saved_img_embs_slic_cb7a005609cb5c57227c55897529417ebc4f377356ebdee20ac0f9b00b1c7fb1.pkl
 ./output/saved_patches_slic_8_webq_full.pkl
+output/
+data/
+__pycache__/
+.ipynb_checkpoints/
+logs/
+plots/

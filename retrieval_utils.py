@@ -303,7 +303,7 @@ def retrieve_with_dessert(all_sub_corpus_embedding_ls, query_embeddings, doc_ret
 #     return results
 
 
-def retrieve_by_embeddings(perc_method, full_sub_queries_ls, queries, retriever, all_sub_corpus_embedding_ls, query_embeddings, qrels, query_count = 10, parallel=False, clustering_topk=500, batch_size=16,in_disk=False,doc_retrieval=None,use_clustering=False,prob_agg="prod",method="two",_nprobe_query=2, index_method="default",dataset_name="", **kwargs):
+def retrieve_by_embeddings(perc_method, full_sub_queries_ls, queries, retriever, all_corpus_embedding_ls, all_sub_corpus_embedding_ls, query_embeddings, qrels, query_count = 10, parallel=False, clustering_topk=500, batch_size=16,in_disk=False,doc_retrieval=None,use_clustering=False,prob_agg="prod",method="two",_nprobe_query=2, index_method="default",dataset_name="", **kwargs):
     print("results with decomposition::")
    
     
@@ -319,12 +319,12 @@ def retrieve_by_embeddings(perc_method, full_sub_queries_ls, queries, retriever,
     if not use_clustering:
         
         # results,_ = retriever.retrieve(None, None, query_embeddings=query_embeddings, all_sub_corpus_embedding_ls=all_sub_corpus_embedding_ls, query_count=query_count, parallel=parallel, in_disk=in_disk)
-        results,_ = retriever.retrieve(None, None, query_embeddings=query_embeddings, all_sub_corpus_embedding_ls=all_sub_corpus_embedding_ls, query_count=query_count, parallel=parallel, in_disk=in_disk, **kwargs)
+        results,_ = retriever.retrieve(None, None, query_embeddings=query_embeddings, all_corpus_embedding_ls=all_corpus_embedding_ls, all_sub_corpus_embedding_ls=all_sub_corpus_embedding_ls, query_count=query_count, parallel=parallel, in_disk=in_disk, **kwargs)
     else:
         if not index_method == "dessert":
             kwargs['index_method'] = index_method
             doc_retrieval._nprobe_query = _nprobe_query #max(2, int(clustering_topk/20))
-            results = doc_retrieval.query_multi_queries(all_sub_corpus_embedding_ls, query_embeddings, top_k=min(clustering_topk,len(all_sub_corpus_embedding_ls)), num_to_rerank=min(clustering_topk,len(all_sub_corpus_embedding_ls)), prob_agg=prob_agg,method=method, **kwargs)
+            results = doc_retrieval.query_multi_queries(all_corpus_embedding_ls, all_sub_corpus_embedding_ls, query_embeddings, top_k=min(clustering_topk,len(all_sub_corpus_embedding_ls)), num_to_rerank=min(clustering_topk,len(all_sub_corpus_embedding_ls)), nprobe=_nprobe_query, prob_agg=prob_agg,method=method, **kwargs)
         else:
             kwargs['clustering_topk'] = clustering_topk
             results = retrieve_with_dessert(all_sub_corpus_embedding_ls, query_embeddings, doc_retrieval, prob_agg, method, **kwargs)
@@ -351,58 +351,58 @@ def retrieve_by_embeddings(perc_method, full_sub_queries_ls, queries, retriever,
     # print(query_lengths)
     
     #Calculate the percentile rank for each query length
-    percentile_ranks = [min(percentileofscore(query_lengths, length), 100) for length in query_lengths]
+    # percentile_ranks = [min(percentileofscore(query_lengths, length), 100) for length in query_lengths]
     
     # Assign each query to a bucket
-    query_buckets = []
-    for rank in percentile_ranks:
+    # query_buckets = []
+    # for rank in percentile_ranks:
         #print(rank)
-        if rank >= 99:
-            query_buckets.append(9.9) # 99-100
-        elif rank >= 95:
-            query_buckets.append(9.5) # 95-99
-        elif rank >= 90:
-            query_buckets.append(9) # 90-95
-        else:
-            query_buckets.append(int(rank // 10))  # 0-10, 10-20, ..., 80-90
+        # if rank >= 99:
+        #     query_buckets.append(9.9) # 99-100
+        # elif rank >= 95:
+        #     query_buckets.append(9.5) # 95-99
+        # elif rank >= 90:
+        #     query_buckets.append(9) # 90-95
+        # else:
+        #     query_buckets.append(int(rank // 10))  # 0-10, 10-20, ..., 80-90
 
     # print("These are the percentiles:")
     # print(query_buckets)
 
     # Grouping queries by their percentile bucket
-    bucket_groups = defaultdict(list)
-    for i, bucket in enumerate(query_buckets):
-        if bucket < 9:
-            bucket_groups[bucket].append(i)
-        if bucket == 9: #90-100th percentile
-            bucket_groups[9].append(i)
-        if bucket == 9.5: #95-100th percentile
-            bucket_groups[9].append(i)
-            bucket_groups[9.5].append(i)
-        if bucket == 9.9: #99-100th percenntile
-            bucket_groups[9].append(i)
-            bucket_groups[9.5].append(i)
-            bucket_groups[9.9].append(i)
+    # bucket_groups = defaultdict(list)
+    # for i, bucket in enumerate(query_buckets):
+    #     if bucket < 9:
+    #         bucket_groups[bucket].append(i)
+    #     if bucket == 9: #90-100th percentile
+    #         bucket_groups[9].append(i)
+    #     if bucket == 9.5: #95-100th percentile
+    #         bucket_groups[9].append(i)
+    #         bucket_groups[9.5].append(i)
+    #     if bucket == 9.9: #99-100th percenntile
+    #         bucket_groups[9].append(i)
+    #         bucket_groups[9.5].append(i)
+    #         bucket_groups[9.9].append(i)
     # print(bucket_groups)
     
     # Evaluate recall for each bucket
-    bucket_recall = {}
-    sorted_buckets = sorted(bucket_groups.keys())
+    # bucket_recall = {}
+    # sorted_buckets = sorted(bucket_groups.keys())
 
-    for bucket in sorted_buckets:
-        indices = bucket_groups[bucket]
-        filtered_queries = [queries[i] for i in indices]
-        # filtered_qrels = {str(i + 1): qrels[str(i + 1)] for i in indices}
-        filtered_results = {str(i + 1): results[str(i + 1)] for i in indices}
+    # for bucket in sorted_buckets:
+    #     indices = bucket_groups[bucket]
+    #     filtered_queries = [queries[i] for i in indices]
+    #     filtered_qrels = {str(i + 1): qrels[str(i + 1)] for i in indices}
+    #     filtered_results = {str(i + 1): results[str(i + 1)] for i in indices}
         
-        if bucket == 9:
-            range_name = "90-100"
-        elif bucket == 9.5:
-            range_name = "95-100"
-        elif bucket == 9.9:
-            range_name = "99-100"
-        else:
-            range_name = f"{bucket * 10}-{bucket * 10 + 10}"
+    #     if bucket == 9:
+    #         range_name = "90-100"
+    #     elif bucket == 9.5:
+    #         range_name = "95-100"
+    #     elif bucket == 9.9:
+    #         range_name = "99-100"
+    #     else:
+    #         range_name = f"{bucket * 10}-{bucket * 10 + 10}"
 
         # print(f"Percentile range {range_name}:")
         # print(f"{len(indices)} queries in this percentile range")
@@ -414,8 +414,8 @@ def retrieve_by_embeddings(perc_method, full_sub_queries_ls, queries, retriever,
     # for range_name, recall in bucket_recall.items():
     #     print(f"{range_name}: {recall}")
     
-    # print("Overall scores:")
-    # ndcg, _map, recall, precision = retriever.evaluate(qrels, results, retriever.k_values, ignore_identical_ids=False)
+    print("Overall scores:")
+    ndcg, _map, recall, precision = retriever.evaluate(qrels, results, retriever.k_values, ignore_identical_ids=False)
     
     return results
 

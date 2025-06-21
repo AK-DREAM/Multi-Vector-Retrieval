@@ -276,9 +276,9 @@ def get_clustering_res_file_name(args, hashes, patch_count_ls):
     
     
     if args.clustering_doc_count_factor == 1:
-        centroid_ls_file_name=f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/centroid_ls_{hashes}_{patch_count_str}_{args.clustering_number}{extra_suffix}.pt"
+        centroid_ls_file_name=f"/home/keli/Decompose_Retrieval/output/centroid_ls_{hashes}_{patch_count_str}_{args.clustering_number}{extra_suffix}.pt"
     else:
-        centroid_ls_file_name=f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/centroid_ls_{hashes}_{patch_count_str}_{args.clustering_number}{extra_suffix}_doclen_{args.clustering_doc_count_factor}.pt"
+        centroid_ls_file_name=f"/home/keli/Decompose_Retrieval/output/centroid_ls_{hashes}_{patch_count_str}_{args.clustering_number}{extra_suffix}_doclen_{args.clustering_doc_count_factor}.pt"
     
     # patch_clustering_info_cached_file =  f"output/saved_patches_{args.dataset_name}_{patch_count_str}.pkl"
     return centroid_ls_file_name
@@ -295,11 +295,11 @@ def get_dessert_clustering_res_file_name(args, hashes, patch_count_ls,clustering
     
     if index_method == "default":
         if typical_doclen == 1:
-            patch_clustering_info_cached_file =  f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/dessert_clustering_res_{hashes}_{patch_count_str}_{index_method}_{clustering_number}{extra_suffix}.pkl"
+            patch_clustering_info_cached_file =  f"/home/keli/Decompose_Retrieval/output/dessert_clustering_res_{hashes}_{patch_count_str}_{index_method}_{clustering_number}{extra_suffix}.pkl"
         else:
-            patch_clustering_info_cached_file =  f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/dessert_clustering_res_{hashes}_{patch_count_str}_{index_method}_{clustering_number}_doclen_{typical_doclen}{extra_suffix}.pkl"
+            patch_clustering_info_cached_file =  f"/home/keli/Decompose_Retrieval/output/dessert_clustering_res_{hashes}_{patch_count_str}_{index_method}_{clustering_number}_doclen_{typical_doclen}{extra_suffix}.pkl"
     else:
-        patch_clustering_info_cached_file =  f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/dessert_clustering_res_{hashes}_{patch_count_str}_{index_method}_{clustering_number}_doclen_{typical_doclen}{extra_suffix}_num_table_{num_tables}_hashes_per_table_{hashes_per_table}.pkl"
+        patch_clustering_info_cached_file =  f"/home/keli/Decompose_Retrieval/output/dessert_clustering_res_{hashes}_{patch_count_str}_{index_method}_{clustering_number}_doclen_{typical_doclen}{extra_suffix}_num_table_{num_tables}_hashes_per_table_{hashes_per_table}.pkl"
     return patch_clustering_info_cached_file
 
 # 0.12 for trec covid 10000
@@ -334,15 +334,15 @@ def clustering_img_patch_embeddings(X_by_img_ls, dataset_name, X_ls, closeness_t
     # clustering_labels = clustering.labels_
     # threshold
     
-    centroid_ls_file_name=f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/{dataset_name}_centroid_ls_{closeness_threshold}.pt"
-    clustering_labels_file_name=f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/{dataset_name}_clustering_labels_{closeness_threshold}.pt"
+    centroid_ls_file_name=f"/home/keli/Decompose_Retrieval/output/{dataset_name}_centroid_ls_{closeness_threshold}.pt"
+    clustering_labels_file_name=f"/home/keli/Decompose_Retrieval/output/{dataset_name}_clustering_labels_{closeness_threshold}.pt"
     if os.path.exists(centroid_ls_file_name) and os.path.exists(clustering_labels_file_name):
         centroid_ls = torch.load(centroid_ls_file_name)
         clustering_labels = torch.load(clustering_labels_file_name)
     else:
         centroid_ls, clustering_labels = online_clustering(X, closeness_threshold=closeness_threshold)
-        torch.save(centroid_ls, f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/{dataset_name}_centroid_ls_{closeness_threshold}.pt")
-        torch.save(clustering_labels, f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/{dataset_name}_clustering_labels_{closeness_threshold}.pt")
+        torch.save(centroid_ls, f"/home/keli/Decompose_Retrieval/output/{dataset_name}_centroid_ls_{closeness_threshold}.pt")
+        torch.save(clustering_labels, f"/home/keli/Decompose_Retrieval/output/{dataset_name}_clustering_labels_{closeness_threshold}.pt")
     print(f"Number of clusters: {len(centroid_ls)}")
     # verify_clustering(X, clustering_labels)
 

@@ -66,7 +66,7 @@ class SentenceBERT:
         if is_sparse:
             queries = [self.prefix + s + self.suffix for s in queries]
         
-        q_embs = self.q_model.encode(queries, batch_size=batch_size, **kwargs)
+        q_embs = self.q_model.encode(queries, batch_size=batch_size, show_progress_bar=False, **kwargs)
         if is_sparse:
             q_embs = obtain_model_tokens(q_embs, self.vocab_model)
         return q_embs

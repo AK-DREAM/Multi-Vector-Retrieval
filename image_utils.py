@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'/home/icml01/multi_rag/RAG/Decompose_retrieval/segment-anything')
+sys.path.append(r'/home/keli/Decompose_Retrieval/segment-anything')
 from segment_anything import SamAutomaticMaskGenerator, sam_model_registry
 import torch
 from tqdm import tqdm
@@ -28,7 +28,8 @@ import math
 import networkx as nx
 from beir.retrieval import models
 from transformers import BlipProcessor, BlipForConditionalGeneration
-
+import json
+import random
 
 
 import requests
@@ -641,9 +642,9 @@ def load_multiqa_datasets(data_path, query_path, subset_img_id=None, redecompose
     return queries_ls, img_file_name_ls, sub_queries_ls, img_idx_ls, grouped_sub_q_ids_ls
 
 def load_manyqa_datasets(data_path, query_path, subset_img_id=None, redecompose=False, is_test=False):
-    img_folder = data_path
+    img_folder = os.path.join(data_path, "images")
     
-    img_caption_file_name = os.path.join(query_path, "queries/manyqa_train.csv")
+    img_caption_file_name = os.path.join(query_path, "manyqa_train.csv")
     caption_pd = pd.read_csv(img_caption_file_name)
 
     img_idx_ls = [] # 所有image的ID
@@ -812,6 +813,8 @@ def load_crepe_datasets(data_path, query_path, subset_img_id=None, redecompose=F
         if image_idx not in selected_img_id_ls:
             continue
         
+        # print("IMAGE IDX:", image_idx)
+
         full_img_file_name = os.path.join(img_folder, str(image_idx) + ".jpg")
         if not os.path.exists(full_img_file_name):
             full_img_file_name = os.path.join(img_folder2, str(image_idx) + ".jpg")
@@ -878,6 +881,32 @@ def load_crepe_datasets(data_path, query_path, subset_img_id=None, redecompose=F
         # print(sub_caption_ls[subset_img_id])
         return [caption_ls[subset_img_id]], [img_file_name_ls[subset_img_id]], [sub_caption_ls[subset_img_id]], [img_idx_ls[subset_img_id]], [all_grouped_sub_q_ids_ls[subset_img_id]]
 
+
+def load_mscoco_datasets_new(data_path, total_count=-1):
+    with open(os.path.join(data_path, 'annotations/captions_train2017.json'), 'r') as f:
+        data = json.load(f)
+    annotations = data['annotations']
+
+    queries = []
+    img_idx_ls = []
+    img_idx_set = set()
+    img_filename_ls = []
+    for item in annotations:
+        image_id = item['image_id']
+        caption = item['caption']
+        if image_id in img_idx_set:
+            continue
+
+        queries.append(caption)
+        img_idx_ls.append(image_id)
+        img_idx_set.add(image_id)
+        img_filename_ls.append(os.path.join(data_path, f"train2017/{image_id:012d}.jpg"))
+
+        if total_count > 0 and len(img_idx_ls) >= total_count:
+            break
+    
+    return queries, img_filename_ls, None, img_idx_ls, None
+    
 
 def load_crepe_text_datasets(data_path, query_path, img_idx_ls):
     # img_caption_file_name= os.path.join(query_path, "prod_hard_negatives/prod_vg_hard_negs_swap_all4.csv")
@@ -963,6 +992,7 @@ def load_other_crepe_images(data_path, query_path, img_idx_ls, img_file_name_ls,
     with open(os.path.join(query_path, "prod_hard_negatives/selected_img_id_ls"), "rb") as f:
         selected_img_id_ls = pickle.load(f)
 
+
     caption_pd = pd.read_csv(img_caption_file_name)
     if total_count > 0 and len(img_file_name_ls) >= total_count:
         return img_idx_ls, img_file_name_ls          
@@ -971,8 +1001,8 @@ def load_other_crepe_images(data_path, query_path, img_idx_ls, img_file_name_ls,
         if image_idx in img_idx_ls:
             continue
         
-        if not image_idx in selected_img_id_ls:
-            continue
+        # if not image_idx in selected_img_id_ls:
+        #     continue
         
         full_img_file_name = os.path.join(img_folder, str(image_idx) + ".jpg")
         if not os.path.exists(full_img_file_name):
@@ -991,6 +1021,7 @@ def load_other_crepe_images(data_path, query_path, img_idx_ls, img_file_name_ls,
         if total_count > 0 and len(img_file_name_ls) >= total_count:
             break
     
+    # print("LEN: ", len(img_idx_ls))
     return img_idx_ls, img_file_name_ls
         
     
@@ -2030,9 +2061,9 @@ class ConceptLearner:
                 # else:
                 #     return img_idx_ls, image_embs, patch_activations, img_for_patch
         if model_name == "default":
-            cached_img_file_name = "/home/icml01/multi_rag/RAG/Decompose_retrieval/" + f"output/saved_img_embs_{method}_{samples_hash}.pkl"
+            cached_img_file_name = "/home/keli/Decompose_Retrieval/" + f"output/saved_img_embs_{method}_{samples_hash}.pkl"
         else:
-            cached_img_file_name = "/home/icml01/multi_rag/RAG/Decompose_retrieval/" + f"output/saved_img_embs_{method}_{model_name}_{samples_hash}.pkl"
+            cached_img_file_name = "/home/keli/Decompose_Retrieval/" + f"output/saved_img_embs_{method}_{model_name}_{samples_hash}.pkl"
             
         if os.path.exists(cached_img_file_name):
             image_embs, cached_img_idx_ls = utils.load(cached_img_file_name)
@@ -2375,7 +2406,10 @@ def reformat_patch_embeddings(patch_emb_ls, img_per_patch_ls, img_emb, bbox_ls=N
             sub_patch_emb_curr_img_ls.append(patch_emb_curr_img)
             if bbox_ls is not None and bbox_ls[sub_idx] is not None:
                 sub_transformed_bbox_ls.extend(bbox_ls[sub_idx][idx])
+
+        # WHY WOULD YOU DO THIS???
         sub_patch_emb_curr_img_ls.append(img_emb[idx].unsqueeze(0))
+
         patch_emb_curr_img = torch.cat(sub_patch_emb_curr_img_ls, dim=0)
         # patch_emb_curr_img = torch.cat([img_emb[idx].unsqueeze(0), sub_patch_emb_curr_img], dim=0)
         patch_emb_curr_img_ls.append(patch_emb_curr_img)

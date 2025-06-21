@@ -64,12 +64,14 @@ class ConceptLearner_text:
     def get_patches(self, model_name, samples_hash, method="slic", patch_count=32):
         
         if model_name == "default":
-            cached_file_name=f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/saved_patches_{method}_{patch_count}_{samples_hash}.pkl"
+            cached_file_name=f"/home/keli/Decompose_Retrieval/output/saved_patches_{method}_{patch_count}_{samples_hash}.pkl"
         elif model_name == "llm":
-            cached_file_name=f"/home/icml01/RAG/Decompose_retrieval/output/saved_patches_{method}_llm_{patch_count}_{samples_hash}.pkl"
+            cached_file_name=f"/home/keli/Decompose_Retrieval/output/saved_patches_{method}_llm_{patch_count}_{samples_hash}.pkl"
         else:
             raise Exception("Invalid model name")
         
+        print("CACHED FILE NAME:", cached_file_name)
+
         if os.path.exists(cached_file_name):
             print("Loading cached patches")
             print(samples_hash)
@@ -131,11 +133,11 @@ def construct_dense_or_sparse_encodings_queries(queries, text_model,add_sparse_i
 
 def construct_dense_or_sparse_encodings(args, corpus, text_model, samples_hash, is_sparse=False):
     if args.model_name == "default" or args.is_img_retrieval:
-        corpus_embedding_file_name = f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/saved_corpus_embeddings_{samples_hash}"
+        corpus_embedding_file_name = f"/home/keli/Decompose_Retrieval/output/saved_corpus_embeddings_{samples_hash}"
     elif args.model_name == "llm":
-        corpus_embedding_file_name = f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/saved_corpus_embeddings_llm_{samples_hash}"
+        corpus_embedding_file_name = f"/home/keli/Decompose_Retrieval/output/saved_corpus_embeddings_llm_{samples_hash}"
     elif args.model_name == "phi":
-        corpus_embedding_file_name = f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/saved_corpus_embeddings_phi_{samples_hash}"
+        corpus_embedding_file_name = f"/home/keli/Decompose_Retrieval/output/saved_corpus_embeddings_phi_{samples_hash}"
     else:
         raise Exception("Invalid model name")
     if is_sparse:
@@ -225,7 +227,7 @@ def convert_samples_to_concepts_txt(args, text_model, corpus, device, raptor_mod
         full_bbox_ls = []
         if raptor_model != None:
                 print("Raptor Image Concepts")
-                cached_file_name=f"/home/icml01/multi_rag/RAG/Decompose_retrieval/output/saved_patches_raptor_1_{samples_hash}.pkl"
+                cached_file_name=f"/home/keli/Decompose_Retrieval/output/saved_patches_raptor_1_{samples_hash}.pkl"
             
                 if os.path.exists(cached_file_name):
                     print("Loading cached patches")
@@ -245,6 +247,7 @@ def convert_samples_to_concepts_txt(args, text_model, corpus, device, raptor_mod
                 patch_activation_ls.append(patch_activations)
                 full_bbox_ls.append(bbox_ls)
         else:
+            print("LEN PATCH COUNT LS:", len(patch_count_ls))
             for idx in range(len(patch_count_ls)):
                 patch_count = patch_count_ls[idx]
                 
