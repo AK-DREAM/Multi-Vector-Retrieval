@@ -342,7 +342,7 @@ def obtain_response_from_llama3_utils(prompt_test):
 
 def obtain_response_from_gpt_utils(prompt_test):
     client = OpenAI(
-        api_key="sk-7cf97c394fe34640a8872d9c4132a6c7",
+        api_key="123456",
         base_url='https://api.deepseek.com/v1', 
     )
 
